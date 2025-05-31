@@ -1,0 +1,16 @@
+C:\Users\mfurk\source\repos\FabrikaOtomasyonApp\FabrikaOtomasyonApp\bin\Debug\FabrikaOtomasyonApp.exe.config
+C:\Users\mfurk\source\repos\FabrikaOtomasyonApp\FabrikaOtomasyonApp\bin\Debug\FabrikaOtomasyonApp.exe
+C:\Users\mfurk\source\repos\FabrikaOtomasyonApp\FabrikaOtomasyonApp\bin\Debug\FabrikaOtomasyonApp.pdb
+C:\Users\mfurk\source\repos\FabrikaOtomasyonApp\FabrikaOtomasyonApp\obj\Debug\FabrikaOtomasyonApp.csproj.AssemblyReference.cache
+C:\Users\mfurk\source\repos\FabrikaOtomasyonApp\FabrikaOtomasyonApp\obj\Debug\FabrikaOtomasyonApp.GirisPanel.resources
+C:\Users\mfurk\source\repos\FabrikaOtomasyonApp\FabrikaOtomasyonApp\obj\Debug\FabrikaOtomasyonApp.PersonelGiris.resources
+C:\Users\mfurk\source\repos\FabrikaOtomasyonApp\FabrikaOtomasyonApp\obj\Debug\FabrikaOtomasyonApp.Properties.Resources.resources
+C:\Users\mfurk\source\repos\FabrikaOtomasyonApp\FabrikaOtomasyonApp\obj\Debug\FabrikaOtomasyonApp.csproj.GenerateResource.cache
+C:\Users\mfurk\source\repos\FabrikaOtomasyonApp\FabrikaOtomasyonApp\obj\Debug\FabrikaOtomasyonApp.csproj.CoreCompileInputs.cache
+C:\Users\mfurk\source\repos\FabrikaOtomasyonApp\FabrikaOtomasyonApp\obj\Debug\FabrikaOtomasyonApp.exe
+C:\Users\mfurk\source\repos\FabrikaOtomasyonApp\FabrikaOtomasyonApp\obj\Debug\FabrikaOtomasyonApp.pdb
+C:\Users\mfurk\source\repos\FabrikaOtomasyonApp\FabrikaOtomasyonApp\obj\Debug\FabrikaOtomasyonApp.MudurGiris.resources
+C:\Users\mfurk\source\repos\FabrikaOtomasyonApp\FabrikaOtomasyonApp\obj\Debug\FabrikaOtomasyonApp.YoneticiGiris.resources
+C:\Users\mfurk\source\repos\FabrikaOtomasyonApp\FabrikaOtomasyonApp\obj\Debug\FabrikaOtomasyonApp.PersonelPanel.resources
+C:\Users\mfurk\source\repos\FabrikaOtomasyonApp\FabrikaOtomasyonApp\obj\Debug\FabrikaOtomasyonApp.Malzemeler.resources
+C:\Users\mfurk\source\repos\FabrikaOtomasyonApp\FabrikaOtomasyonApp\obj\Debug\FabrikaOtomasyonApp.Stoklar.resources
