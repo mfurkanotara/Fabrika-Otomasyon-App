@@ -56,6 +56,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dbFabrikaDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dbFabrikaDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbFabrikaDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Evraklar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Evraklar.Designer.cs">
+      <DependentUpon>Evraklar.cs</DependentUpon>
+    </Compile>
     <Compile Include="GirisPanel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +105,9 @@
     <Compile Include="YoneticiGiris.Designer.cs">
       <DependentUpon>YoneticiGiris.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Evraklar.resx">
+      <DependentUpon>Evraklar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GirisPanel.resx">
       <DependentUpon>GirisPanel.cs</DependentUpon>
     </EmbeddedResource>
@@ -142,6 +156,17 @@
     </None>
     <None Include="dbFabrikaDataSet1.xss">
       <DependentUpon>dbFabrikaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="dbFabrikaDataSet2.xsc">
+      <DependentUpon>dbFabrikaDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="dbFabrikaDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbFabrikaDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbFabrikaDataSet2.xss">
+      <DependentUpon>dbFabrikaDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
