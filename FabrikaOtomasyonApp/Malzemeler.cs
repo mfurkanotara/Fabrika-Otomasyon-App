@@ -72,7 +72,7 @@ namespace FabrikaOtomasyonApp
             {
                 baglanti.Open();
                 command.ExecuteNonQuery();
-                MessageBox.Show("Malzeme kaydedildi."); //SQL kaydet komutunu çalıştırır.
+                MessageBox.Show("Malzeme kaydedildi.");
                 ListeleMalzemeler();
             }
             catch (Exception ex)
