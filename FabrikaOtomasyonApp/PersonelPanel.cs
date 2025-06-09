@@ -30,10 +30,16 @@ namespace FabrikaOtomasyonApp
             this.Hide();
         }
 
-        private void btnStoklar_Click(object sender, EventArgs e)
+        private void btnCikis_Click(object sender, EventArgs e)
         {
-            Stoklar stoklar = new Stoklar();
-            stoklar.Show();
+            this.Close();
+            Application.Exit();
+        }
+
+        private void btnEvraklar_Click(object sender, EventArgs e)
+        {
+            Evraklar evraklar = new Evraklar();
+            evraklar.Show();
             this.Hide();
         }
     }

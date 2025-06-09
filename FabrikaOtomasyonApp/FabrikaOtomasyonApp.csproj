@@ -61,6 +61,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dbFabrikaDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dbFabrikaDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbFabrikaDataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Evraklar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +96,12 @@
     <Compile Include="PersonelGiris.Designer.cs">
       <DependentUpon>PersonelGiris.cs</DependentUpon>
     </Compile>
+    <Compile Include="Personeller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personeller.Designer.cs">
+      <DependentUpon>Personeller.cs</DependentUpon>
+    </Compile>
     <Compile Include="PersonelPanel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +115,12 @@
     </Compile>
     <Compile Include="YoneticiGiris.Designer.cs">
       <DependentUpon>YoneticiGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YoneticiPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YoneticiPanel.Designer.cs">
+      <DependentUpon>YoneticiPanel.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Evraklar.resx">
       <DependentUpon>Evraklar.cs</DependentUpon>
@@ -120,6 +137,9 @@
     <EmbeddedResource Include="PersonelGiris.resx">
       <DependentUpon>PersonelGiris.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Personeller.resx">
+      <DependentUpon>Personeller.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PersonelPanel.resx">
       <DependentUpon>PersonelPanel.cs</DependentUpon>
     </EmbeddedResource>
@@ -134,6 +154,9 @@
     </Compile>
     <EmbeddedResource Include="YoneticiGiris.resx">
       <DependentUpon>YoneticiGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YoneticiPanel.resx">
+      <DependentUpon>YoneticiPanel.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="dbFabrikaDataSet.xsc">
       <DependentUpon>dbFabrikaDataSet.xsd</DependentUpon>
@@ -167,6 +190,17 @@
     </None>
     <None Include="dbFabrikaDataSet2.xss">
       <DependentUpon>dbFabrikaDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="dbFabrikaDataSet3.xsc">
+      <DependentUpon>dbFabrikaDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="dbFabrikaDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbFabrikaDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbFabrikaDataSet3.xss">
+      <DependentUpon>dbFabrikaDataSet3.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
