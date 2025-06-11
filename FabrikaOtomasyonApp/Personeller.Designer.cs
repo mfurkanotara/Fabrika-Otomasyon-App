@@ -30,16 +30,24 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgvKullanicilar = new System.Windows.Forms.DataGridView();
-            this.dbFabrikaDataSet3 = new FabrikaOtomasyonApp.dbFabrikaDataSet3();
-            this.kullanicilarBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.kullanicilarTableAdapter = new FabrikaOtomasyonApp.dbFabrikaDataSet3TableAdapters.kullanicilarTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kullaniciAdiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sifreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rolDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kullanicilarBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dbFabrikaDataSet3 = new FabrikaOtomasyonApp.dbFabrikaDataSet3();
+            this.kullanicilarTableAdapter = new FabrikaOtomasyonApp.dbFabrikaDataSet3TableAdapters.kullanicilarTableAdapter();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtKullaniciAdi = new System.Windows.Forms.TextBox();
+            this.txtSifre = new System.Windows.Forms.TextBox();
+            this.btnKaydet = new System.Windows.Forms.Button();
+            this.btnTemizle = new System.Windows.Forms.Button();
+            this.cbRol = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKullanicilar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbFabrikaDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kullanicilarBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbFabrikaDataSet3)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvKullanicilar
@@ -56,20 +64,6 @@
             this.dgvKullanicilar.Name = "dgvKullanicilar";
             this.dgvKullanicilar.Size = new System.Drawing.Size(443, 425);
             this.dgvKullanicilar.TabIndex = 0;
-            // 
-            // dbFabrikaDataSet3
-            // 
-            this.dbFabrikaDataSet3.DataSetName = "dbFabrikaDataSet3";
-            this.dbFabrikaDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // kullanicilarBindingSource
-            // 
-            this.kullanicilarBindingSource.DataMember = "kullanicilar";
-            this.kullanicilarBindingSource.DataSource = this.dbFabrikaDataSet3;
-            // 
-            // kullanicilarTableAdapter
-            // 
-            this.kullanicilarTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -96,20 +90,124 @@
             this.rolDataGridViewTextBoxColumn.HeaderText = "Rol";
             this.rolDataGridViewTextBoxColumn.Name = "rolDataGridViewTextBoxColumn";
             // 
+            // kullanicilarBindingSource
+            // 
+            this.kullanicilarBindingSource.DataMember = "kullanicilar";
+            this.kullanicilarBindingSource.DataSource = this.dbFabrikaDataSet3;
+            // 
+            // dbFabrikaDataSet3
+            // 
+            this.dbFabrikaDataSet3.DataSetName = "dbFabrikaDataSet3";
+            this.dbFabrikaDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // kullanicilarTableAdapter
+            // 
+            this.kullanicilarTableAdapter.ClearBeforeFill = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(504, 106);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(104, 18);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Kullanıcı Adı:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Location = new System.Drawing.Point(560, 141);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(48, 18);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Şifre:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(569, 178);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(39, 18);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Rol:";
+            // 
+            // txtKullaniciAdi
+            // 
+            this.txtKullaniciAdi.Location = new System.Drawing.Point(614, 107);
+            this.txtKullaniciAdi.Name = "txtKullaniciAdi";
+            this.txtKullaniciAdi.Size = new System.Drawing.Size(138, 20);
+            this.txtKullaniciAdi.TabIndex = 12;
+            // 
+            // txtSifre
+            // 
+            this.txtSifre.Location = new System.Drawing.Point(614, 141);
+            this.txtSifre.Name = "txtSifre";
+            this.txtSifre.Size = new System.Drawing.Size(138, 20);
+            this.txtSifre.TabIndex = 13;
+            // 
+            // btnKaydet
+            // 
+            this.btnKaydet.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnKaydet.Location = new System.Drawing.Point(481, 281);
+            this.btnKaydet.Name = "btnKaydet";
+            this.btnKaydet.Size = new System.Drawing.Size(296, 70);
+            this.btnKaydet.TabIndex = 15;
+            this.btnKaydet.Text = "Kaydet";
+            this.btnKaydet.UseVisualStyleBackColor = true;
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
+            // 
+            // btnTemizle
+            // 
+            this.btnTemizle.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnTemizle.Location = new System.Drawing.Point(481, 357);
+            this.btnTemizle.Name = "btnTemizle";
+            this.btnTemizle.Size = new System.Drawing.Size(296, 70);
+            this.btnTemizle.TabIndex = 16;
+            this.btnTemizle.Text = "Temizle";
+            this.btnTemizle.UseVisualStyleBackColor = true;
+            this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
+            // 
+            // cbRol
+            // 
+            this.cbRol.FormattingEnabled = true;
+            this.cbRol.Items.AddRange(new object[] {
+            "Yonetici",
+            "Mudur",
+            "Personel"});
+            this.cbRol.Location = new System.Drawing.Point(614, 174);
+            this.cbRol.Name = "cbRol";
+            this.cbRol.Size = new System.Drawing.Size(138, 21);
+            this.cbRol.TabIndex = 17;
+            // 
             // Personeller
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cbRol);
+            this.Controls.Add(this.btnTemizle);
+            this.Controls.Add(this.btnKaydet);
+            this.Controls.Add(this.txtSifre);
+            this.Controls.Add(this.txtKullaniciAdi);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvKullanicilar);
             this.Name = "Personeller";
             this.Text = "Personeller";
             this.Load += new System.EventHandler(this.Personeller_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvKullanicilar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbFabrikaDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kullanicilarBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbFabrikaDataSet3)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -123,5 +221,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn kullaniciAdiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sifreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rolDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtKullaniciAdi;
+        private System.Windows.Forms.TextBox txtSifre;
+        private System.Windows.Forms.Button btnKaydet;
+        private System.Windows.Forms.Button btnTemizle;
+        private System.Windows.Forms.ComboBox cbRol;
     }
 }

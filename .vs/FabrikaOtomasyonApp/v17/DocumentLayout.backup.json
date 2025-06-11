@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\mfurk\\source\\repos\\FabrikaOtomasyonApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{943B6DD2-F7E5-4315-8978-CCFCC89B0BE3}|FabrikaOtomasyonApp\\FabrikaOtomasyonApp.csproj|c:\\users\\mfurk\\source\\repos\\fabrikaotomasyonapp\\fabrikaotomasyonapp\\malzemeler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{943B6DD2-F7E5-4315-8978-CCFCC89B0BE3}|FabrikaOtomasyonApp\\FabrikaOtomasyonApp.csproj|solutionrelative:fabrikaotomasyonapp\\malzemeler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{943B6DD2-F7E5-4315-8978-CCFCC89B0BE3}|FabrikaOtomasyonApp\\FabrikaOtomasyonApp.csproj|c:\\users\\mfurk\\source\\repos\\fabrikaotomasyonapp\\fabrikaotomasyonapp\\yoneticigiris.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{943B6DD2-F7E5-4315-8978-CCFCC89B0BE3}|FabrikaOtomasyonApp\\FabrikaOtomasyonApp.csproj|solutionrelative:fabrikaotomasyonapp\\yoneticigiris.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{943B6DD2-F7E5-4315-8978-CCFCC89B0BE3}|FabrikaOtomasyonApp\\FabrikaOtomasyonApp.csproj|c:\\users\\mfurk\\source\\repos\\fabrikaotomasyonapp\\fabrikaotomasyonapp\\evraklar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{943B6DD2-F7E5-4315-8978-CCFCC89B0BE3}|FabrikaOtomasyonApp\\FabrikaOtomasyonApp.csproj|solutionrelative:fabrikaotomasyonapp\\evraklar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{943B6DD2-F7E5-4315-8978-CCFCC89B0BE3}|FabrikaOtomasyonApp\\FabrikaOtomasyonApp.csproj|c:\\users\\mfurk\\source\\repos\\fabrikaotomasyonapp\\fabrikaotomasyonapp\\personelgiris.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{943B6DD2-F7E5-4315-8978-CCFCC89B0BE3}|FabrikaOtomasyonApp\\FabrikaOtomasyonApp.csproj|solutionrelative:fabrikaotomasyonapp\\personelgiris.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{943B6DD2-F7E5-4315-8978-CCFCC89B0BE3}|FabrikaOtomasyonApp\\FabrikaOtomasyonApp.csproj|C:\\Users\\mfurk\\source\\repos\\FabrikaOtomasyonApp\\fabrikaotomasyonapp\\evraklar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{943B6DD2-F7E5-4315-8978-CCFCC89B0BE3}|FabrikaOtomasyonApp\\FabrikaOtomasyonApp.csproj|c:\\users\\mfurk\\source\\repos\\fabrikaotomasyonapp\\fabrikaotomasyonapp\\evraklar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{943B6DD2-F7E5-4315-8978-CCFCC89B0BE3}|FabrikaOtomasyonApp\\FabrikaOtomasyonApp.csproj|solutionrelative:fabrikaotomasyonapp\\evraklar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{943B6DD2-F7E5-4315-8978-CCFCC89B0BE3}|FabrikaOtomasyonApp\\FabrikaOtomasyonApp.csproj|c:\\users\\mfurk\\source\\repos\\fabrikaotomasyonapp\\fabrikaotomasyonapp\\malzemeler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{943B6DD2-F7E5-4315-8978-CCFCC89B0BE3}|FabrikaOtomasyonApp\\FabrikaOtomasyonApp.csproj|solutionrelative:fabrikaotomasyonapp\\malzemeler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{943B6DD2-F7E5-4315-8978-CCFCC89B0BE3}|FabrikaOtomasyonApp\\FabrikaOtomasyonApp.csproj|c:\\users\\mfurk\\source\\repos\\fabrikaotomasyonapp\\fabrikaotomasyonapp\\personeller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{943B6DD2-F7E5-4315-8978-CCFCC89B0BE3}|FabrikaOtomasyonApp\\FabrikaOtomasyonApp.csproj|solutionrelative:fabrikaotomasyonapp\\personeller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{943B6DD2-F7E5-4315-8978-CCFCC89B0BE3}|FabrikaOtomasyonApp\\FabrikaOtomasyonApp.csproj|C:\\Users\\mfurk\\source\\repos\\FabrikaOtomasyonApp\\fabrikaotomasyonapp\\personeller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{943B6DD2-F7E5-4315-8978-CCFCC89B0BE3}|FabrikaOtomasyonApp\\FabrikaOtomasyonApp.csproj|solutionrelative:fabrikaotomasyonapp\\personeller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,29 +38,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Malzemeler.cs",
-              "DocumentMoniker": "C:\\Users\\mfurk\\source\\repos\\FabrikaOtomasyonApp\\FabrikaOtomasyonApp\\Malzemeler.cs",
-              "RelativeDocumentMoniker": "FabrikaOtomasyonApp\\Malzemeler.cs",
-              "ToolTip": "C:\\Users\\mfurk\\source\\repos\\FabrikaOtomasyonApp\\FabrikaOtomasyonApp\\Malzemeler.cs",
-              "RelativeToolTip": "FabrikaOtomasyonApp\\Malzemeler.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAkwFEAAAATAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "PersonelGiris.cs",
+              "DocumentMoniker": "C:\\Users\\mfurk\\source\\repos\\FabrikaOtomasyonApp\\FabrikaOtomasyonApp\\PersonelGiris.cs",
+              "RelativeDocumentMoniker": "FabrikaOtomasyonApp\\PersonelGiris.cs",
+              "ToolTip": "C:\\Users\\mfurk\\source\\repos\\FabrikaOtomasyonApp\\FabrikaOtomasyonApp\\PersonelGiris.cs",
+              "RelativeToolTip": "FabrikaOtomasyonApp\\PersonelGiris.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAADwvzcAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-08T08:29:52.425Z",
+              "WhenOpened": "2025-06-11T15:26:49.239Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Evraklar.cs",
-              "DocumentMoniker": "C:\\Users\\mfurk\\source\\repos\\FabrikaOtomasyonApp\\FabrikaOtomasyonApp\\Evraklar.cs",
-              "RelativeDocumentMoniker": "FabrikaOtomasyonApp\\Evraklar.cs",
-              "ToolTip": "C:\\Users\\mfurk\\source\\repos\\FabrikaOtomasyonApp\\FabrikaOtomasyonApp\\Evraklar.cs",
-              "RelativeToolTip": "FabrikaOtomasyonApp\\Evraklar.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAkwFEAAAAjAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "YoneticiGiris.cs",
+              "DocumentMoniker": "C:\\Users\\mfurk\\source\\repos\\FabrikaOtomasyonApp\\FabrikaOtomasyonApp\\YoneticiGiris.cs",
+              "RelativeDocumentMoniker": "FabrikaOtomasyonApp\\YoneticiGiris.cs",
+              "ToolTip": "C:\\Users\\mfurk\\source\\repos\\FabrikaOtomasyonApp\\FabrikaOtomasyonApp\\YoneticiGiris.cs",
+              "RelativeToolTip": "FabrikaOtomasyonApp\\YoneticiGiris.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAUwDAAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-08T08:19:48.688Z",
+              "WhenOpened": "2025-06-11T15:26:42.351Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Personeller.cs",
+              "DocumentMoniker": "C:\\Users\\mfurk\\source\\repos\\FabrikaOtomasyonApp\\FabrikaOtomasyonApp\\Personeller.cs",
+              "RelativeDocumentMoniker": "FabrikaOtomasyonApp\\Personeller.cs",
+              "ToolTip": "C:\\Users\\mfurk\\source\\repos\\FabrikaOtomasyonApp\\FabrikaOtomasyonApp\\Personeller.cs",
+              "RelativeToolTip": "FabrikaOtomasyonApp\\Personeller.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAwwD0AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T19:29:32.775Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Personeller.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\mfurk\\source\\repos\\FabrikaOtomasyonApp\\FabrikaOtomasyonApp\\Personeller.cs",
+              "RelativeDocumentMoniker": "FabrikaOtomasyonApp\\Personeller.cs",
+              "ToolTip": "C:\\Users\\mfurk\\source\\repos\\FabrikaOtomasyonApp\\FabrikaOtomasyonApp\\Personeller.cs [Design]",
+              "RelativeToolTip": "FabrikaOtomasyonApp\\Personeller.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T19:25:14.417Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -67,19 +96,7 @@
               "ToolTip": "C:\\Users\\mfurk\\source\\repos\\FabrikaOtomasyonApp\\FabrikaOtomasyonApp\\Evraklar.cs [Design]",
               "RelativeToolTip": "FabrikaOtomasyonApp\\Evraklar.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-07T17:35:18.29Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Malzemeler.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\mfurk\\source\\repos\\FabrikaOtomasyonApp\\FabrikaOtomasyonApp\\Malzemeler.cs",
-              "RelativeDocumentMoniker": "FabrikaOtomasyonApp\\Malzemeler.cs",
-              "ToolTip": "C:\\Users\\mfurk\\source\\repos\\FabrikaOtomasyonApp\\FabrikaOtomasyonApp\\Malzemeler.cs [Design]",
-              "RelativeToolTip": "FabrikaOtomasyonApp\\Malzemeler.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T18:09:58.852Z",
+              "WhenOpened": "2025-06-11T15:01:43.671Z",
               "EditorCaption": " [Design]"
             }
           ]

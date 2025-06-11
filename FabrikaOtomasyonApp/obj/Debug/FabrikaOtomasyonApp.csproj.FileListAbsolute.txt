@@ -13,4 +13,6 @@ C:\Users\mfurk\source\repos\FabrikaOtomasyonApp\FabrikaOtomasyonApp\obj\Debug\Fa
 C:\Users\mfurk\source\repos\FabrikaOtomasyonApp\FabrikaOtomasyonApp\obj\Debug\FabrikaOtomasyonApp.YoneticiGiris.resources
 C:\Users\mfurk\source\repos\FabrikaOtomasyonApp\FabrikaOtomasyonApp\obj\Debug\FabrikaOtomasyonApp.PersonelPanel.resources
 C:\Users\mfurk\source\repos\FabrikaOtomasyonApp\FabrikaOtomasyonApp\obj\Debug\FabrikaOtomasyonApp.Malzemeler.resources
-C:\Users\mfurk\source\repos\FabrikaOtomasyonApp\FabrikaOtomasyonApp\obj\Debug\FabrikaOtomasyonApp.Stoklar.resources
+C:\Users\mfurk\source\repos\FabrikaOtomasyonApp\FabrikaOtomasyonApp\obj\Debug\FabrikaOtomasyonApp.Evraklar.resources
+C:\Users\mfurk\source\repos\FabrikaOtomasyonApp\FabrikaOtomasyonApp\obj\Debug\FabrikaOtomasyonApp.Personeller.resources
+C:\Users\mfurk\source\repos\FabrikaOtomasyonApp\FabrikaOtomasyonApp\obj\Debug\FabrikaOtomasyonApp.YoneticiPanel.resources

@@ -45,7 +45,10 @@ namespace FabrikaOtomasyonApp
 
             if (girisBasarili)
             {
-                MessageBox.Show("Giriş başarılı.");
+                YoneticiPanel yoneticiPanel = new YoneticiPanel();
+                yoneticiPanel.KullaniciAdi = kullaniciAdi;
+                yoneticiPanel.Show();
+                this.Hide();
             }
             else
             {

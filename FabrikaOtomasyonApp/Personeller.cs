@@ -34,5 +34,45 @@ namespace FabrikaOtomasyonApp
             dataAdapter.Fill(dataTable);
             dgvKullanicilar.DataSource = dataTable;
         }
+
+        private void btnKaydet_Click(object sender, EventArgs e)
+        {
+            string kullaniciAdi = txtKullaniciAdi.Text;
+            string sifre = txtSifre.Text;
+            string rol = cbRol.Text;
+
+            if (string.IsNullOrEmpty(kullaniciAdi) || string.IsNullOrEmpty(sifre) || string.IsNullOrEmpty(rol))
+            {
+                MessageBox.Show("Lütfen bütün alanları doldurun.");
+                return;
+            }
+
+            SqlCommand command = new SqlCommand("INSERT INTO kullanicilar (kullaniciAdi, sifre, rol) VALUES (@kullaniciadi, @sifre, @rol)", baglanti);
+            command.Parameters.AddWithValue("@kullaniciadi", kullaniciAdi);
+            command.Parameters.AddWithValue("@sifre", sifre);
+            command.Parameters.AddWithValue("@rol", rol);
+
+            try
+            {
+                baglanti.Open();
+                command.ExecuteNonQuery();
+                MessageBox.Show("Kullanıcı kaydedildi.");
+                ListelePersoneller();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hata: " + ex.Message);
+            }
+            finally
+            {
+                baglanti.Close();
+            }
+        }
+
+        private void btnTemizle_Click(object sender, EventArgs e)
+        {
+            txtKullaniciAdi.Text = "";
+            txtSifre.Text = "";
+        }
     }
 }
