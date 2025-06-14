@@ -29,5 +29,12 @@ namespace FabrikaOtomasyonApp
             personeller.Show();
             this.Hide();
         }
+
+        private void btnFaturalar_Click(object sender, EventArgs e)
+        {
+            Faturalar faturalar = new Faturalar();
+            faturalar.Show();
+            this.Hide();
+        }
     }
 }

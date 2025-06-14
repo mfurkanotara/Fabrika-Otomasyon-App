@@ -61,6 +61,7 @@
             // btnEvraklar
             // 
             this.btnEvraklar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnEvraklar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEvraklar.Font = new System.Drawing.Font("Nirmala Text", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnEvraklar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnEvraklar.Location = new System.Drawing.Point(12, 193);
