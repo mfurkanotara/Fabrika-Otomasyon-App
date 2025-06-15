@@ -30,9 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgvFaturalar = new System.Windows.Forms.DataGridView();
-            this.dbFabrikaDataSet4 = new FabrikaOtomasyonApp.dbFabrikaDataSet4();
-            this.faturalarBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.faturalarTableAdapter = new FabrikaOtomasyonApp.dbFabrikaDataSet4TableAdapters.faturalarTableAdapter();
             this.faturanoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.faturatarihiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.faturatipiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,6 +39,9 @@
             this.dosyayoluDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aciklamaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eklenmetarihiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.faturalarBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dbFabrikaDataSet4 = new FabrikaOtomasyonApp.dbFabrikaDataSet4();
+            this.faturalarTableAdapter = new FabrikaOtomasyonApp.dbFabrikaDataSet4TableAdapters.faturalarTableAdapter();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -60,9 +60,11 @@
             this.dtpFaturaTarihi = new System.Windows.Forms.DateTimePicker();
             this.btnKaydet = new System.Windows.Forms.Button();
             this.btnTemizle = new System.Windows.Forms.Button();
+            this.btnGuncelle = new System.Windows.Forms.Button();
+            this.btnFaturaSil = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFaturalar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbFabrikaDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.faturalarBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbFabrikaDataSet4)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvFaturalar
@@ -82,22 +84,9 @@
             this.dgvFaturalar.DataSource = this.faturalarBindingSource;
             this.dgvFaturalar.Location = new System.Drawing.Point(13, 13);
             this.dgvFaturalar.Name = "dgvFaturalar";
-            this.dgvFaturalar.Size = new System.Drawing.Size(943, 529);
+            this.dgvFaturalar.Size = new System.Drawing.Size(943, 619);
             this.dgvFaturalar.TabIndex = 0;
-            // 
-            // dbFabrikaDataSet4
-            // 
-            this.dbFabrikaDataSet4.DataSetName = "dbFabrikaDataSet4";
-            this.dbFabrikaDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // faturalarBindingSource
-            // 
-            this.faturalarBindingSource.DataMember = "faturalar";
-            this.faturalarBindingSource.DataSource = this.dbFabrikaDataSet4;
-            // 
-            // faturalarTableAdapter
-            // 
-            this.faturalarTableAdapter.ClearBeforeFill = true;
+            this.dgvFaturalar.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFaturalar_CellClick);
             // 
             // faturanoDataGridViewTextBoxColumn
             // 
@@ -152,6 +141,20 @@
             this.eklenmetarihiDataGridViewTextBoxColumn.DataPropertyName = "eklenme_tarihi";
             this.eklenmetarihiDataGridViewTextBoxColumn.HeaderText = "Eklenme Tarihi";
             this.eklenmetarihiDataGridViewTextBoxColumn.Name = "eklenmetarihiDataGridViewTextBoxColumn";
+            // 
+            // faturalarBindingSource
+            // 
+            this.faturalarBindingSource.DataMember = "faturalar";
+            this.faturalarBindingSource.DataSource = this.dbFabrikaDataSet4;
+            // 
+            // dbFabrikaDataSet4
+            // 
+            this.dbFabrikaDataSet4.DataSetName = "dbFabrikaDataSet4";
+            this.dbFabrikaDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // faturalarTableAdapter
+            // 
+            this.faturalarTableAdapter.ClearBeforeFill = true;
             // 
             // label3
             // 
@@ -313,7 +316,7 @@
             // btnTemizle
             // 
             this.btnTemizle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnTemizle.Location = new System.Drawing.Point(971, 484);
+            this.btnTemizle.Location = new System.Drawing.Point(971, 587);
             this.btnTemizle.Name = "btnTemizle";
             this.btnTemizle.Size = new System.Drawing.Size(314, 45);
             this.btnTemizle.TabIndex = 30;
@@ -321,12 +324,36 @@
             this.btnTemizle.UseVisualStyleBackColor = true;
             this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
             // 
+            // btnGuncelle
+            // 
+            this.btnGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnGuncelle.Location = new System.Drawing.Point(971, 485);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(314, 45);
+            this.btnGuncelle.TabIndex = 31;
+            this.btnGuncelle.Text = "Güncelle";
+            this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
+            // 
+            // btnFaturaSil
+            // 
+            this.btnFaturaSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnFaturaSil.Location = new System.Drawing.Point(971, 537);
+            this.btnFaturaSil.Name = "btnFaturaSil";
+            this.btnFaturaSil.Size = new System.Drawing.Size(314, 44);
+            this.btnFaturaSil.TabIndex = 32;
+            this.btnFaturaSil.Text = "Faturayı Sil";
+            this.btnFaturaSil.UseVisualStyleBackColor = true;
+            this.btnFaturaSil.Click += new System.EventHandler(this.btnFaturaSil_Click);
+            // 
             // Faturalar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SandyBrown;
-            this.ClientSize = new System.Drawing.Size(1297, 554);
+            this.ClientSize = new System.Drawing.Size(1297, 644);
+            this.Controls.Add(this.btnFaturaSil);
+            this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.btnTemizle);
             this.Controls.Add(this.btnKaydet);
             this.Controls.Add(this.dtpFaturaTarihi);
@@ -350,8 +377,8 @@
             this.Text = "Faturalar";
             this.Load += new System.EventHandler(this.Faturalar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFaturalar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbFabrikaDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.faturalarBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbFabrikaDataSet4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -390,5 +417,7 @@
         private System.Windows.Forms.DateTimePicker dtpFaturaTarihi;
         private System.Windows.Forms.Button btnKaydet;
         private System.Windows.Forms.Button btnTemizle;
+        private System.Windows.Forms.Button btnGuncelle;
+        private System.Windows.Forms.Button btnFaturaSil;
     }
 }

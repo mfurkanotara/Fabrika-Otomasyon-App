@@ -93,5 +93,108 @@ namespace FabrikaOtomasyonApp
             txtDosyaYolu.Text = "";
             txtAciklama.Text = "";
         }
+
+        private void dgvFaturalar_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow satir = dgvFaturalar.Rows[e.RowIndex];
+                txtFaturaNo.Text = satir.Cells["faturanoDataGridViewTextBoxColumn"].Value.ToString();
+                dtpFaturaTarihi.Text = satir.Cells["faturatarihiDataGridViewTextBoxColumn"].Value.ToString();
+                txtFaturaTipi.Text = satir.Cells["faturatipiDataGridViewTextBoxColumn"].Value.ToString();
+                txtFirmaAdi.Text = satir.Cells["firmaadiDataGridViewTextBoxColumn"].Value.ToString();
+                txtTutar.Text = satir.Cells["tutarDataGridViewTextBoxColumn"].Value.ToString();
+                txtOdenmeDurumu.Text = satir.Cells["odemedurumuDataGridViewTextBoxColumn"].Value.ToString();
+                txtDosyaYolu.Text = satir.Cells["dosyayoluDataGridViewTextBoxColumn"].Value.ToString();
+                txtAciklama.Text = satir.Cells["aciklamaDataGridViewTextBoxColumn"].Value.ToString();
+            }
+        }
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            if (dgvFaturalar.Rows.Count > 0)
+            {
+                string faturaNo = txtFaturaNo.Text;
+                DateTime faturaTarihi = dtpFaturaTarihi.Value;
+                string faturaTipi = txtFaturaTipi.Text;
+                string firmaAdi = txtFirmaAdi.Text;
+                decimal tutar;
+                if (!decimal.TryParse(txtTutar.Text, out tutar))
+                {
+                    MessageBox.Show("Tutar sayısal olmalı");
+                    return;
+                }
+
+                string odemeDurumu = txtOdenmeDurumu.Text;
+                string dosyaYolu = txtDosyaYolu.Text;
+                string aciklama = txtAciklama.Text;
+
+                string secilenFaturaNo = dgvFaturalar.SelectedRows[0].Cells["faturanoDataGridViewTextBoxColumn"].Value?.ToString();
+
+                SqlCommand command = new SqlCommand(@"UPDATE faturalar SET fatura_tarihi = @faturaTarihi,fatura_tipi = @faturaTipi,firma_adi = @firmaAdi, tutar = @tutar, odeme_durumu = @odemeDurumu, dosya_yolu = @dosyaYolu, aciklama = @aciklama, eklenme_tarihi = @eklenmeTarihi WHERE fatura_no = @eskiFaturaNo", baglanti);
+
+                command.Parameters.AddWithValue("@faturaTarihi", faturaTarihi);
+                command.Parameters.AddWithValue("@faturaTipi", faturaTipi);
+                command.Parameters.AddWithValue("@firmaAdi", firmaAdi);
+                command.Parameters.AddWithValue("@tutar", tutar);
+                command.Parameters.AddWithValue("@odemeDurumu", odemeDurumu);
+                command.Parameters.AddWithValue("@dosyaYolu", dosyaYolu);
+                command.Parameters.AddWithValue("@aciklama", aciklama);
+                command.Parameters.AddWithValue("@eklenmeTarihi", DateTime.Now);
+                command.Parameters.AddWithValue("@eskiFaturaNo", secilenFaturaNo);
+
+                try
+                {
+                    baglanti.Open();
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Fatura güncellendi.");
+                    ListeleFaturalar();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Hata: " + ex.Message);
+                }
+                finally
+                {
+                    baglanti.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Lütfen güncellenecek bir fatura seçin.");
+            }
+
+        }
+
+        private void btnFaturaSil_Click(object sender, EventArgs e)
+        {
+            if (dgvFaturalar.SelectedCells.Count > 0)
+            {
+                string secilenFaturaNo = dgvFaturalar.SelectedRows[0].Cells["faturanoDataGridViewTextBoxColumn"].Value?.ToString();
+
+                SqlCommand komut = new SqlCommand("DELETE FROM faturalar WHERE fatura_no = @faturaNo", baglanti);
+                komut.Parameters.AddWithValue("@faturaNo", secilenFaturaNo);
+
+                try
+                {
+                    baglanti.Open();
+                    komut.ExecuteNonQuery();
+                    MessageBox.Show("Fatura silindi.");
+                    ListeleFaturalar();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Hata: " + ex.Message);
+                }
+                finally
+                {
+                    baglanti.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Lütfen silmek için bir satır seçin.");
+            }
+        }
     }
 }
