@@ -31,11 +31,5 @@ namespace FabrikaOtomasyonApp
             this.Hide();
         }
 
-        private void btnMudur_Click(object sender, EventArgs e)
-        {
-            MudurGiris mudurGiris = new MudurGiris();
-            mudurGiris.Show();
-            this.Hide();
-        }
     }
 }

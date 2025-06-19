@@ -9,7 +9,6 @@ C:\Users\mfurk\source\repos\FabrikaOtomasyonApp\FabrikaOtomasyonApp\obj\Debug\Fa
 C:\Users\mfurk\source\repos\FabrikaOtomasyonApp\FabrikaOtomasyonApp\obj\Debug\FabrikaOtomasyonApp.csproj.CoreCompileInputs.cache
 C:\Users\mfurk\source\repos\FabrikaOtomasyonApp\FabrikaOtomasyonApp\obj\Debug\FabrikaOtomasyonApp.exe
 C:\Users\mfurk\source\repos\FabrikaOtomasyonApp\FabrikaOtomasyonApp\obj\Debug\FabrikaOtomasyonApp.pdb
-C:\Users\mfurk\source\repos\FabrikaOtomasyonApp\FabrikaOtomasyonApp\obj\Debug\FabrikaOtomasyonApp.MudurGiris.resources
 C:\Users\mfurk\source\repos\FabrikaOtomasyonApp\FabrikaOtomasyonApp\obj\Debug\FabrikaOtomasyonApp.YoneticiGiris.resources
 C:\Users\mfurk\source\repos\FabrikaOtomasyonApp\FabrikaOtomasyonApp\obj\Debug\FabrikaOtomasyonApp.PersonelPanel.resources
 C:\Users\mfurk\source\repos\FabrikaOtomasyonApp\FabrikaOtomasyonApp\obj\Debug\FabrikaOtomasyonApp.Malzemeler.resources
@@ -17,3 +16,4 @@ C:\Users\mfurk\source\repos\FabrikaOtomasyonApp\FabrikaOtomasyonApp\obj\Debug\Fa
 C:\Users\mfurk\source\repos\FabrikaOtomasyonApp\FabrikaOtomasyonApp\obj\Debug\FabrikaOtomasyonApp.Personeller.resources
 C:\Users\mfurk\source\repos\FabrikaOtomasyonApp\FabrikaOtomasyonApp\obj\Debug\FabrikaOtomasyonApp.YoneticiPanel.resources
 C:\Users\mfurk\source\repos\FabrikaOtomasyonApp\FabrikaOtomasyonApp\obj\Debug\FabrikaOtomasyonApp.Faturalar.resources
+C:\Users\mfurk\source\repos\FabrikaOtomasyonApp\FabrikaOtomasyonApp\obj\Debug\FabrikaOtomasyonApp.Randevular.resources

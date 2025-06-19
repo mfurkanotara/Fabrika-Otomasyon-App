@@ -31,6 +31,8 @@
             this.lblHosgeldin = new System.Windows.Forms.Label();
             this.btnPersoneller = new System.Windows.Forms.Button();
             this.btnFaturalar = new System.Windows.Forms.Button();
+            this.btnCikis = new System.Windows.Forms.Button();
+            this.btnRandevular = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblHosgeldin
@@ -67,12 +69,39 @@
             this.btnFaturalar.UseVisualStyleBackColor = false;
             this.btnFaturalar.Click += new System.EventHandler(this.btnFaturalar_Click);
             // 
+            // btnCikis
+            // 
+            this.btnCikis.BackColor = System.Drawing.Color.Red;
+            this.btnCikis.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCikis.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnCikis.Location = new System.Drawing.Point(29, 380);
+            this.btnCikis.Name = "btnCikis";
+            this.btnCikis.Size = new System.Drawing.Size(126, 42);
+            this.btnCikis.TabIndex = 5;
+            this.btnCikis.Text = "Çıkış Yap";
+            this.btnCikis.UseVisualStyleBackColor = false;
+            this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
+            // 
+            // btnRandevular
+            // 
+            this.btnRandevular.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnRandevular.Font = new System.Drawing.Font("Nirmala Text", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnRandevular.Location = new System.Drawing.Point(29, 250);
+            this.btnRandevular.Name = "btnRandevular";
+            this.btnRandevular.Size = new System.Drawing.Size(343, 69);
+            this.btnRandevular.TabIndex = 6;
+            this.btnRandevular.Text = "RANDEVULAR";
+            this.btnRandevular.UseVisualStyleBackColor = false;
+            this.btnRandevular.Click += new System.EventHandler(this.btnRandevular_Click);
+            // 
             // YoneticiPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(404, 450);
+            this.ClientSize = new System.Drawing.Size(404, 448);
+            this.Controls.Add(this.btnRandevular);
+            this.Controls.Add(this.btnCikis);
             this.Controls.Add(this.btnFaturalar);
             this.Controls.Add(this.btnPersoneller);
             this.Controls.Add(this.lblHosgeldin);
@@ -89,5 +118,7 @@
         private System.Windows.Forms.Label lblHosgeldin;
         private System.Windows.Forms.Button btnPersoneller;
         private System.Windows.Forms.Button btnFaturalar;
+        private System.Windows.Forms.Button btnCikis;
+        private System.Windows.Forms.Button btnRandevular;
     }
 }

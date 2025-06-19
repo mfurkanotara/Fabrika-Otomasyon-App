@@ -36,5 +36,18 @@ namespace FabrikaOtomasyonApp
             faturalar.Show();
             this.Hide();
         }
+
+        private void btnRandevular_Click(object sender, EventArgs e)
+        {
+            Randevular randevular = new Randevular();
+            randevular.Show();
+            this.Hide();
+        }
+
+        private void btnCikis_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Application.Exit();
+        }
     }
 }

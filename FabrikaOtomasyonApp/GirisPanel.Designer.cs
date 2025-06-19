@@ -31,7 +31,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnPersonel = new System.Windows.Forms.Button();
             this.btnYonetici = new System.Windows.Forms.Button();
-            this.btnMudur = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -72,27 +71,12 @@
             this.btnYonetici.UseVisualStyleBackColor = false;
             this.btnYonetici.Click += new System.EventHandler(this.btnYonetici_Click);
             // 
-            // btnMudur
-            // 
-            this.btnMudur.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.btnMudur.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMudur.Font = new System.Drawing.Font("Ebrima", 26.25F, System.Drawing.FontStyle.Bold);
-            this.btnMudur.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnMudur.Location = new System.Drawing.Point(47, 291);
-            this.btnMudur.Name = "btnMudur";
-            this.btnMudur.Size = new System.Drawing.Size(237, 85);
-            this.btnMudur.TabIndex = 3;
-            this.btnMudur.Text = "MÜDÜR";
-            this.btnMudur.UseVisualStyleBackColor = false;
-            this.btnMudur.Click += new System.EventHandler(this.btnMudur_Click);
-            // 
             // GirisPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.ClientSize = new System.Drawing.Size(332, 423);
-            this.Controls.Add(this.btnMudur);
+            this.ClientSize = new System.Drawing.Size(332, 321);
             this.Controls.Add(this.btnYonetici);
             this.Controls.Add(this.btnPersonel);
             this.Controls.Add(this.label1);
@@ -109,7 +93,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnPersonel;
         private System.Windows.Forms.Button btnYonetici;
-        private System.Windows.Forms.Button btnMudur;
     }
 }
 
