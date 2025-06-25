@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClosedXML.Excel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -81,6 +82,77 @@ namespace FabrikaOtomasyonApp
             txtBirim.Text = "";
             txtDosyaYolu.Text = "";
             txtAciklama.Text = "";
+        }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            if (dgvEvraklar.SelectedCells.Count > 0)
+            {
+                string secilenevrakId = dgvEvraklar.SelectedRows[0].Cells["evrakIdDataGridViewTextBoxColumn"].Value?.ToString();
+
+                SqlCommand komut = new SqlCommand("DELETE FROM evraklar WHERE evrakId = @evrakId", baglanti);
+                komut.Parameters.AddWithValue("@evrakId", secilenevrakId);
+
+                try
+                {
+                    baglanti.Open();
+                    komut.ExecuteNonQuery();
+                    MessageBox.Show("Evrak silindi.");
+                    ListeleEvraklar();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Hata: " + ex.Message);
+                }
+                finally
+                {
+                    baglanti.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Lütfen silmek için bir satır seçin.");
+            }
+        }
+
+        private void btnExcelAktarma_Click(object sender, EventArgs e)
+        {
+            if (dgvEvraklar.Rows.Count > 0)
+            {
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
+                saveFileDialog.Filter = "Excel Files|*.xlsx";
+                saveFileDialog.Title = "Excel Dosyasını Kaydet";
+                saveFileDialog.FileName = "Evraklar.xlsx";
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    var workbook = new XLWorkbook();
+                    var worksheet = workbook.Worksheets.Add("Evraklar");
+
+                    // Başlıkları yaz
+                    for (int i = 0; i < dgvEvraklar.Columns.Count; i++)
+                    {
+                        worksheet.Cell(1, i + 1).Value = dgvEvraklar.Columns[i].HeaderText;
+                    }
+
+                    // Verileri yaz
+                    for (int i = 0; i < dgvEvraklar.Rows.Count; i++)
+                    {
+                        for (int j = 0; j < dgvEvraklar.Columns.Count; j++)
+                        {
+                            var val = dgvEvraklar.Rows[i].Cells[j].Value;
+                            worksheet.Cell(i + 2, j + 1).Value = val != null ? val.ToString() : "";
+                        }
+                    }
+
+                    workbook.SaveAs(saveFileDialog.FileName);
+                    MessageBox.Show("Excel dosyası başarıyla kaydedildi.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Veri bulunamadı!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

@@ -74,5 +74,36 @@ namespace FabrikaOtomasyonApp
             txtKullaniciAdi.Text = "";
             txtSifre.Text = "";
         }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            if (dgvKullanicilar.SelectedCells.Count > 0)
+            {
+                string secilenkullaniciId = dgvKullanicilar.SelectedRows[0].Cells["idDataGridViewTextBoxColumn"].Value?.ToString();
+
+                SqlCommand komut = new SqlCommand("DELETE FROM kullanicilar WHERE id = @id", baglanti);
+                komut.Parameters.AddWithValue("@id", secilenkullaniciId);
+
+                try
+                {
+                    baglanti.Open();
+                    komut.ExecuteNonQuery();
+                    MessageBox.Show("Personel silindi.");
+                    ListelePersoneller();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Hata: " + ex.Message);
+                }
+                finally
+                {
+                    baglanti.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Lütfen silmek için bir satır seçin.");
+            }
+        }
     }
 }

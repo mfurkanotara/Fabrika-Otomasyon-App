@@ -30,13 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgvRandevular = new System.Windows.Forms.DataGridView();
-            this.dbFabrikaDataSet5 = new FabrikaOtomasyonApp.dbFabrikaDataSet5();
-            this.randevularBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.randevularTableAdapter = new FabrikaOtomasyonApp.dbFabrikaDataSet5TableAdapters.randevularTableAdapter();
             this.randevuKoduDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.randevuKonuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gorusulecekKisiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.randevuTarihiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.randevularBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dbFabrikaDataSet6 = new FabrikaOtomasyonApp.dbFabrikaDataSet6();
+            this.dbFabrikaDataSet5 = new FabrikaOtomasyonApp.dbFabrikaDataSet5();
+            this.randevularBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.randevularTableAdapter = new FabrikaOtomasyonApp.dbFabrikaDataSet5TableAdapters.randevularTableAdapter();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,14 +49,12 @@
             this.btnRandevuSil = new System.Windows.Forms.Button();
             this.btnTemizle = new System.Windows.Forms.Button();
             this.btnGuncelle = new System.Windows.Forms.Button();
-            this.dbFabrikaDataSet6 = new FabrikaOtomasyonApp.dbFabrikaDataSet6();
-            this.randevularBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.randevularTableAdapter1 = new FabrikaOtomasyonApp.dbFabrikaDataSet6TableAdapters.randevularTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRandevular)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.randevularBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbFabrikaDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbFabrikaDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.randevularBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbFabrikaDataSet6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.randevularBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvRandevular
@@ -72,20 +72,6 @@
             this.dgvRandevular.Size = new System.Drawing.Size(443, 424);
             this.dgvRandevular.TabIndex = 0;
             this.dgvRandevular.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRandevular_CellClick);
-            // 
-            // dbFabrikaDataSet5
-            // 
-            this.dbFabrikaDataSet5.DataSetName = "dbFabrikaDataSet5";
-            this.dbFabrikaDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // randevularBindingSource
-            // 
-            this.randevularBindingSource.DataMember = "randevular";
-            this.randevularBindingSource.DataSource = this.dbFabrikaDataSet5;
-            // 
-            // randevularTableAdapter
-            // 
-            this.randevularTableAdapter.ClearBeforeFill = true;
             // 
             // randevuKoduDataGridViewTextBoxColumn
             // 
@@ -111,6 +97,30 @@
             this.randevuTarihiDataGridViewTextBoxColumn.DataPropertyName = "randevuTarihi";
             this.randevuTarihiDataGridViewTextBoxColumn.HeaderText = "Randevu Tarihi";
             this.randevuTarihiDataGridViewTextBoxColumn.Name = "randevuTarihiDataGridViewTextBoxColumn";
+            // 
+            // randevularBindingSource1
+            // 
+            this.randevularBindingSource1.DataMember = "randevular";
+            this.randevularBindingSource1.DataSource = this.dbFabrikaDataSet6;
+            // 
+            // dbFabrikaDataSet6
+            // 
+            this.dbFabrikaDataSet6.DataSetName = "dbFabrikaDataSet6";
+            this.dbFabrikaDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dbFabrikaDataSet5
+            // 
+            this.dbFabrikaDataSet5.DataSetName = "dbFabrikaDataSet5";
+            this.dbFabrikaDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // randevularBindingSource
+            // 
+            this.randevularBindingSource.DataMember = "randevular";
+            this.randevularBindingSource.DataSource = this.dbFabrikaDataSet5;
+            // 
+            // randevularTableAdapter
+            // 
+            this.randevularTableAdapter.ClearBeforeFill = true;
             // 
             // label6
             // 
@@ -168,6 +178,7 @@
             // 
             // btnKaydet
             // 
+            this.btnKaydet.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKaydet.Location = new System.Drawing.Point(462, 242);
             this.btnKaydet.Name = "btnKaydet";
@@ -179,6 +190,7 @@
             // 
             // btnRandevuSil
             // 
+            this.btnRandevuSil.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRandevuSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnRandevuSil.Location = new System.Drawing.Point(462, 293);
             this.btnRandevuSil.Name = "btnRandevuSil";
@@ -190,6 +202,7 @@
             // 
             // btnTemizle
             // 
+            this.btnTemizle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTemizle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnTemizle.Location = new System.Drawing.Point(462, 392);
             this.btnTemizle.Name = "btnTemizle";
@@ -201,6 +214,7 @@
             // 
             // btnGuncelle
             // 
+            this.btnGuncelle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnGuncelle.Location = new System.Drawing.Point(462, 344);
             this.btnGuncelle.Name = "btnGuncelle";
@@ -209,16 +223,6 @@
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = true;
             this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
-            // 
-            // dbFabrikaDataSet6
-            // 
-            this.dbFabrikaDataSet6.DataSetName = "dbFabrikaDataSet6";
-            this.dbFabrikaDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // randevularBindingSource1
-            // 
-            this.randevularBindingSource1.DataMember = "randevular";
-            this.randevularBindingSource1.DataSource = this.dbFabrikaDataSet6;
             // 
             // randevularTableAdapter1
             // 
@@ -245,10 +249,10 @@
             this.Text = "Randevular";
             this.Load += new System.EventHandler(this.Randevular_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRandevular)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.randevularBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbFabrikaDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbFabrikaDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.randevularBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbFabrikaDataSet6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.randevularBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -48,6 +48,7 @@
             // btnPersoneller
             // 
             this.btnPersoneller.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnPersoneller.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPersoneller.Font = new System.Drawing.Font("Nirmala Text", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnPersoneller.Location = new System.Drawing.Point(29, 100);
             this.btnPersoneller.Name = "btnPersoneller";
@@ -60,6 +61,7 @@
             // btnFaturalar
             // 
             this.btnFaturalar.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnFaturalar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFaturalar.Font = new System.Drawing.Font("Nirmala Text", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnFaturalar.Location = new System.Drawing.Point(29, 175);
             this.btnFaturalar.Name = "btnFaturalar";
@@ -72,6 +74,7 @@
             // btnCikis
             // 
             this.btnCikis.BackColor = System.Drawing.Color.Red;
+            this.btnCikis.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCikis.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCikis.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnCikis.Location = new System.Drawing.Point(29, 380);
@@ -85,6 +88,7 @@
             // btnRandevular
             // 
             this.btnRandevular.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnRandevular.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRandevular.Font = new System.Drawing.Font("Nirmala Text", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnRandevular.Location = new System.Drawing.Point(29, 250);
             this.btnRandevular.Name = "btnRandevular";

@@ -38,6 +38,7 @@
             // btnGirisYap
             // 
             this.btnGirisYap.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnGirisYap.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGirisYap.Font = new System.Drawing.Font("Ebrima", 26.25F, System.Drawing.FontStyle.Bold);
             this.btnGirisYap.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnGirisYap.Location = new System.Drawing.Point(78, 318);

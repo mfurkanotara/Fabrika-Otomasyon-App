@@ -62,6 +62,7 @@
             this.btnTemizle = new System.Windows.Forms.Button();
             this.btnGuncelle = new System.Windows.Forms.Button();
             this.btnFaturaSil = new System.Windows.Forms.Button();
+            this.btnExcelAktarma = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFaturalar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.faturalarBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbFabrikaDataSet4)).BeginInit();
@@ -84,7 +85,7 @@
             this.dgvFaturalar.DataSource = this.faturalarBindingSource;
             this.dgvFaturalar.Location = new System.Drawing.Point(13, 13);
             this.dgvFaturalar.Name = "dgvFaturalar";
-            this.dgvFaturalar.Size = new System.Drawing.Size(943, 619);
+            this.dgvFaturalar.Size = new System.Drawing.Size(943, 668);
             this.dgvFaturalar.TabIndex = 0;
             this.dgvFaturalar.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFaturalar_CellClick);
             // 
@@ -304,6 +305,7 @@
             // 
             // btnKaydet
             // 
+            this.btnKaydet.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKaydet.Location = new System.Drawing.Point(971, 433);
             this.btnKaydet.Name = "btnKaydet";
@@ -315,8 +317,9 @@
             // 
             // btnTemizle
             // 
+            this.btnTemizle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTemizle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnTemizle.Location = new System.Drawing.Point(971, 587);
+            this.btnTemizle.Location = new System.Drawing.Point(971, 636);
             this.btnTemizle.Name = "btnTemizle";
             this.btnTemizle.Size = new System.Drawing.Size(314, 45);
             this.btnTemizle.TabIndex = 30;
@@ -326,6 +329,7 @@
             // 
             // btnGuncelle
             // 
+            this.btnGuncelle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnGuncelle.Location = new System.Drawing.Point(971, 485);
             this.btnGuncelle.Name = "btnGuncelle";
@@ -337,8 +341,9 @@
             // 
             // btnFaturaSil
             // 
+            this.btnFaturaSil.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFaturaSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnFaturaSil.Location = new System.Drawing.Point(971, 537);
+            this.btnFaturaSil.Location = new System.Drawing.Point(971, 586);
             this.btnFaturaSil.Name = "btnFaturaSil";
             this.btnFaturaSil.Size = new System.Drawing.Size(314, 44);
             this.btnFaturaSil.TabIndex = 32;
@@ -346,12 +351,25 @@
             this.btnFaturaSil.UseVisualStyleBackColor = true;
             this.btnFaturaSil.Click += new System.EventHandler(this.btnFaturaSil_Click);
             // 
+            // btnExcelAktarma
+            // 
+            this.btnExcelAktarma.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExcelAktarma.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnExcelAktarma.Location = new System.Drawing.Point(971, 536);
+            this.btnExcelAktarma.Name = "btnExcelAktarma";
+            this.btnExcelAktarma.Size = new System.Drawing.Size(314, 44);
+            this.btnExcelAktarma.TabIndex = 33;
+            this.btnExcelAktarma.Text = "Excel\'e Aktar";
+            this.btnExcelAktarma.UseVisualStyleBackColor = true;
+            this.btnExcelAktarma.Click += new System.EventHandler(this.btnExcelAktarma_Click);
+            // 
             // Faturalar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SandyBrown;
-            this.ClientSize = new System.Drawing.Size(1297, 644);
+            this.ClientSize = new System.Drawing.Size(1297, 698);
+            this.Controls.Add(this.btnExcelAktarma);
             this.Controls.Add(this.btnFaturaSil);
             this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.btnTemizle);
@@ -419,5 +437,6 @@
         private System.Windows.Forms.Button btnTemizle;
         private System.Windows.Forms.Button btnGuncelle;
         private System.Windows.Forms.Button btnFaturaSil;
+        private System.Windows.Forms.Button btnExcelAktarma;
     }
 }

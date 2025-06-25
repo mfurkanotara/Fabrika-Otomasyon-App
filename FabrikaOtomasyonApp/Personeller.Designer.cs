@@ -45,6 +45,7 @@
             this.btnKaydet = new System.Windows.Forms.Button();
             this.btnTemizle = new System.Windows.Forms.Button();
             this.cbRol = new System.Windows.Forms.ComboBox();
+            this.btnSil = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKullanicilar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kullanicilarBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbFabrikaDataSet3)).BeginInit();
@@ -62,7 +63,7 @@
             this.dgvKullanicilar.DataSource = this.kullanicilarBindingSource;
             this.dgvKullanicilar.Location = new System.Drawing.Point(13, 13);
             this.dgvKullanicilar.Name = "dgvKullanicilar";
-            this.dgvKullanicilar.Size = new System.Drawing.Size(443, 425);
+            this.dgvKullanicilar.Size = new System.Drawing.Size(443, 490);
             this.dgvKullanicilar.TabIndex = 0;
             // 
             // idDataGridViewTextBoxColumn
@@ -153,6 +154,7 @@
             // 
             // btnKaydet
             // 
+            this.btnKaydet.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnKaydet.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnKaydet.Location = new System.Drawing.Point(481, 281);
             this.btnKaydet.Name = "btnKaydet";
@@ -164,8 +166,9 @@
             // 
             // btnTemizle
             // 
+            this.btnTemizle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTemizle.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold);
-            this.btnTemizle.Location = new System.Drawing.Point(481, 357);
+            this.btnTemizle.Location = new System.Drawing.Point(481, 433);
             this.btnTemizle.Name = "btnTemizle";
             this.btnTemizle.Size = new System.Drawing.Size(296, 70);
             this.btnTemizle.TabIndex = 16;
@@ -185,12 +188,25 @@
             this.cbRol.Size = new System.Drawing.Size(138, 21);
             this.cbRol.TabIndex = 17;
             // 
+            // btnSil
+            // 
+            this.btnSil.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSil.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnSil.Location = new System.Drawing.Point(481, 357);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(296, 70);
+            this.btnSil.TabIndex = 18;
+            this.btnSil.Text = "Sil";
+            this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
+            // 
             // Personeller
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 515);
+            this.Controls.Add(this.btnSil);
             this.Controls.Add(this.cbRol);
             this.Controls.Add(this.btnTemizle);
             this.Controls.Add(this.btnKaydet);
@@ -229,5 +245,6 @@
         private System.Windows.Forms.Button btnKaydet;
         private System.Windows.Forms.Button btnTemizle;
         private System.Windows.Forms.ComboBox cbRol;
+        private System.Windows.Forms.Button btnSil;
     }
 }

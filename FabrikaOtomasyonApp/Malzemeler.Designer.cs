@@ -62,6 +62,8 @@
             this.dtpTedarikTarihi = new System.Windows.Forms.DateTimePicker();
             this.btnKaydet = new System.Windows.Forms.Button();
             this.btnTemizle = new System.Windows.Forms.Button();
+            this.btnSil = new System.Windows.Forms.Button();
+            this.btnGuncelle = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMalzemeler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.malzemelerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbFabrikaDataSet)).BeginInit();
@@ -85,8 +87,9 @@
             this.dgvMalzemeler.DataSource = this.malzemelerBindingSource;
             this.dgvMalzemeler.Location = new System.Drawing.Point(13, 13);
             this.dgvMalzemeler.Name = "dgvMalzemeler";
-            this.dgvMalzemeler.Size = new System.Drawing.Size(943, 560);
+            this.dgvMalzemeler.Size = new System.Drawing.Size(943, 630);
             this.dgvMalzemeler.TabIndex = 0;
+            this.dgvMalzemeler.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMalzemeler_CellClick);
             // 
             // malzemeKoduDataGridViewTextBoxColumn
             // 
@@ -329,8 +332,9 @@
             // 
             // btnKaydet
             // 
+            this.btnKaydet.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnKaydet.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKaydet.Location = new System.Drawing.Point(983, 465);
+            this.btnKaydet.Location = new System.Drawing.Point(983, 462);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(306, 41);
             this.btnKaydet.TabIndex = 20;
@@ -340,8 +344,9 @@
             // 
             // btnTemizle
             // 
+            this.btnTemizle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTemizle.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold);
-            this.btnTemizle.Location = new System.Drawing.Point(983, 512);
+            this.btnTemizle.Location = new System.Drawing.Point(983, 602);
             this.btnTemizle.Name = "btnTemizle";
             this.btnTemizle.Size = new System.Drawing.Size(306, 41);
             this.btnTemizle.TabIndex = 21;
@@ -349,12 +354,38 @@
             this.btnTemizle.UseVisualStyleBackColor = true;
             this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
             // 
+            // btnSil
+            // 
+            this.btnSil.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSil.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnSil.Location = new System.Drawing.Point(983, 509);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(306, 41);
+            this.btnSil.TabIndex = 22;
+            this.btnSil.Text = "Sil";
+            this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
+            // 
+            // btnGuncelle
+            // 
+            this.btnGuncelle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGuncelle.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnGuncelle.Location = new System.Drawing.Point(983, 556);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(306, 40);
+            this.btnGuncelle.TabIndex = 23;
+            this.btnGuncelle.Text = "Güncelle";
+            this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
+            // 
             // Malzemeler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(1301, 585);
+            this.ClientSize = new System.Drawing.Size(1301, 660);
+            this.Controls.Add(this.btnGuncelle);
+            this.Controls.Add(this.btnSil);
             this.Controls.Add(this.btnTemizle);
             this.Controls.Add(this.btnKaydet);
             this.Controls.Add(this.dtpTedarikTarihi);
@@ -423,5 +454,7 @@
         private System.Windows.Forms.DateTimePicker dtpTedarikTarihi;
         private System.Windows.Forms.Button btnKaydet;
         private System.Windows.Forms.Button btnTemizle;
+        private System.Windows.Forms.Button btnSil;
+        private System.Windows.Forms.Button btnGuncelle;
     }
 }

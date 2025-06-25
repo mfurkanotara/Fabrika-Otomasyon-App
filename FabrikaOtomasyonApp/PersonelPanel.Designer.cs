@@ -75,6 +75,7 @@
             // btnCikis
             // 
             this.btnCikis.BackColor = System.Drawing.Color.Red;
+            this.btnCikis.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCikis.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCikis.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnCikis.Location = new System.Drawing.Point(12, 347);

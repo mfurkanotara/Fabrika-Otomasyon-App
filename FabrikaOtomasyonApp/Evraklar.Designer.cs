@@ -54,6 +54,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnKaydet = new System.Windows.Forms.Button();
             this.btnTemizle = new System.Windows.Forms.Button();
+            this.btnExcelAktarma = new System.Windows.Forms.Button();
+            this.btnSil = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEvraklar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.evraklarBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbFabrikaDataSet2)).BeginInit();
@@ -74,7 +76,7 @@
             this.dgvEvraklar.DataSource = this.evraklarBindingSource;
             this.dgvEvraklar.Location = new System.Drawing.Point(13, 13);
             this.dgvEvraklar.Name = "dgvEvraklar";
-            this.dgvEvraklar.Size = new System.Drawing.Size(743, 578);
+            this.dgvEvraklar.Size = new System.Drawing.Size(743, 657);
             this.dgvEvraklar.TabIndex = 0;
             // 
             // evrakIdDataGridViewTextBoxColumn
@@ -239,6 +241,7 @@
             // 
             // btnKaydet
             // 
+            this.btnKaydet.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnKaydet.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnKaydet.Location = new System.Drawing.Point(778, 484);
             this.btnKaydet.Name = "btnKaydet";
@@ -250,8 +253,9 @@
             // 
             // btnTemizle
             // 
+            this.btnTemizle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTemizle.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold);
-            this.btnTemizle.Location = new System.Drawing.Point(778, 532);
+            this.btnTemizle.Location = new System.Drawing.Point(778, 628);
             this.btnTemizle.Name = "btnTemizle";
             this.btnTemizle.Size = new System.Drawing.Size(269, 42);
             this.btnTemizle.TabIndex = 15;
@@ -259,12 +263,38 @@
             this.btnTemizle.UseVisualStyleBackColor = true;
             this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
             // 
+            // btnExcelAktarma
+            // 
+            this.btnExcelAktarma.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExcelAktarma.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnExcelAktarma.Location = new System.Drawing.Point(778, 580);
+            this.btnExcelAktarma.Name = "btnExcelAktarma";
+            this.btnExcelAktarma.Size = new System.Drawing.Size(269, 42);
+            this.btnExcelAktarma.TabIndex = 16;
+            this.btnExcelAktarma.Text = "Excel\'e Aktar";
+            this.btnExcelAktarma.UseVisualStyleBackColor = true;
+            this.btnExcelAktarma.Click += new System.EventHandler(this.btnExcelAktarma_Click);
+            // 
+            // btnSil
+            // 
+            this.btnSil.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSil.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnSil.Location = new System.Drawing.Point(778, 532);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(269, 42);
+            this.btnSil.TabIndex = 17;
+            this.btnSil.Text = "Sil";
+            this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
+            // 
             // Evraklar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gold;
-            this.ClientSize = new System.Drawing.Size(1059, 603);
+            this.ClientSize = new System.Drawing.Size(1059, 684);
+            this.Controls.Add(this.btnSil);
+            this.Controls.Add(this.btnExcelAktarma);
             this.Controls.Add(this.btnTemizle);
             this.Controls.Add(this.btnKaydet);
             this.Controls.Add(this.label5);
@@ -319,5 +349,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnKaydet;
         private System.Windows.Forms.Button btnTemizle;
+        private System.Windows.Forms.Button btnExcelAktarma;
+        private System.Windows.Forms.Button btnSil;
     }
 }

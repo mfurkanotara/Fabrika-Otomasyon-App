@@ -96,5 +96,105 @@ namespace FabrikaOtomasyonApp
             txtBulunduguRaf.Text = "";
             txtAciklama.Text = "";
         }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            if (dgvMalzemeler.SelectedCells.Count > 0)
+            {
+                string secilenmalzemeId = dgvMalzemeler.SelectedRows[0].Cells["malzemeKoduDataGridViewTextBoxColumn"].Value?.ToString();
+
+                SqlCommand komut = new SqlCommand("DELETE FROM malzemeler WHERE malzemeKodu = @malzemekodu", baglanti);
+                komut.Parameters.AddWithValue("@malzemekodu", secilenmalzemeId);
+
+                try
+                {
+                    baglanti.Open();
+                    komut.ExecuteNonQuery();
+                    MessageBox.Show("Malzeme silindi.");
+                    ListeleMalzemeler();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Hata: " + ex.Message);
+                }
+                finally
+                {
+                    baglanti.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Lütfen silmek için bir satır seçin.");
+            }
+        }
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            if (dgvMalzemeler.Rows.Count > 0)
+            {
+                string malzemekodu = txtMalzemeKodu.Text;
+                string malzemeadi = txtMalzemeAdi.Text;
+                string malzemetipi = txtMalzemeTipi.Text;
+                string birim = txtBirim.Text;
+                string adet = txtAdet.Text;
+                string tedarikciadi = txtTedarikciAdi.Text;
+                DateTime tedariktarihi = dtpTedarikTarihi.Value;
+                string bulunduguraf = txtBulunduguRaf.Text;
+                string aciklama = txtAciklama.Text;
+
+                string secilenmalzemeKodu = dgvMalzemeler.SelectedRows[0].Cells["malzemeKoduDataGridViewTextBoxColumn"].Value?.ToString();
+
+                SqlCommand command = new SqlCommand(@"UPDATE malzemeler SET malzemeKodu = @malzemekodu, malzemeAdi = @malzemeadi, malzemeTipi = @malzemetipi, birim = @birim, adet = @adet, tedarikciAdi = @tedarikciadi, tedarikTarihi = @tedariktarihi, bulunduguRaf = @bulunduguraf, aciklama = @aciklama WHERE malzemeKodu = @eskimalzemeKodu", baglanti);
+
+                command.Parameters.AddWithValue("@eskimalzemeKodu", secilenmalzemeKodu);
+                command.Parameters.AddWithValue("@malzemekodu", malzemekodu);
+                command.Parameters.AddWithValue("@malzemeadi", malzemeadi);
+                command.Parameters.AddWithValue("@malzemetipi", malzemetipi);
+                command.Parameters.AddWithValue("@birim", birim);
+                command.Parameters.AddWithValue("@adet", adet);
+                command.Parameters.AddWithValue("@tedarikciadi", tedarikciadi);
+                command.Parameters.AddWithValue("@tedariktarihi", tedariktarihi);
+                command.Parameters.AddWithValue("@bulunduguraf", bulunduguraf);
+                command.Parameters.AddWithValue("@aciklama", aciklama);
+
+                try
+                {
+                    baglanti.Open();
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Malzeme güncellendi.");
+                    ListeleMalzemeler();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Hata: " + ex.Message);
+                }
+                finally
+                {
+                    baglanti.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Lütfen güncellenecek bir malzeme seçin.");
+            }
+        }
+
+        private void dgvMalzemeler_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow satir = dgvMalzemeler.Rows[e.RowIndex];
+
+                txtMalzemeKodu.Text = satir.Cells["malzemeKoduDataGridViewTextBoxColumn"].Value?.ToString();
+                txtMalzemeAdi.Text = satir.Cells["malzemeAdiDataGridViewTextBoxColumn"].Value?.ToString();
+                txtMalzemeTipi.Text = satir.Cells["malzemeTipiDataGridViewTextBoxColumn"].Value?.ToString();
+                txtBirim.Text = satir.Cells["birimDataGridViewTextBoxColumn"].Value?.ToString();
+                txtAdet.Text = satir.Cells["adetDataGridViewTextBoxColumn"].Value?.ToString();
+                txtTedarikciAdi.Text = satir.Cells["tedarikciAdiDataGridViewTextBoxColumn"].Value?.ToString();
+                dtpTedarikTarihi.Text = satir.Cells["tedarikTarihiDataGridViewTextBoxColumn"].Value?.ToString();
+                txtBulunduguRaf.Text = satir.Cells["bulunduguRafDataGridViewTextBoxColumn"].Value?.ToString();
+                txtAciklama.Text = satir.Cells["aciklamaDataGridViewTextBoxColumn"].Value?.ToString();
+            }
+        }
     }
 }
