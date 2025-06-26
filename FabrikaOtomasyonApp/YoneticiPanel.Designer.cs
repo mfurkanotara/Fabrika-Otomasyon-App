@@ -109,6 +109,7 @@
             this.Controls.Add(this.btnFaturalar);
             this.Controls.Add(this.btnPersoneller);
             this.Controls.Add(this.lblHosgeldin);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "YoneticiPanel";
             this.Text = "Yönetici Paneli";
             this.Load += new System.EventHandler(this.YoneticiPanel_Load);

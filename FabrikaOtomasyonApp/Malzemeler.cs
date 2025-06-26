@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClosedXML.Excel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,6 +26,8 @@ namespace FabrikaOtomasyonApp
             // TODO: This line of code loads data into the 'dbFabrikaDataSet.malzemeler' table. You can move, or remove it, as needed.
             // this.malzemelerTableAdapter.Fill(this.dbFabrikaDataSet.malzemeler);
             ListeleMalzemeler();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+
         }
 
         private void ListeleMalzemeler()
@@ -195,6 +198,53 @@ namespace FabrikaOtomasyonApp
                 txtBulunduguRaf.Text = satir.Cells["bulunduguRafDataGridViewTextBoxColumn"].Value?.ToString();
                 txtAciklama.Text = satir.Cells["aciklamaDataGridViewTextBoxColumn"].Value?.ToString();
             }
+        }
+
+        private void btnExcelAktarma_Click(object sender, EventArgs e)
+        {
+            if (dgvMalzemeler.Rows.Count > 0)
+            {
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
+                saveFileDialog.Filter = "Excel Files|*.xlsx";
+                saveFileDialog.Title = "Excel Dosyasını Kaydet";
+                saveFileDialog.FileName = "Malzemeler.xlsx";
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    var workbook = new XLWorkbook();
+                    var worksheet = workbook.Worksheets.Add("Malzemeler");
+
+                    // Başlıkları yaz
+                    for (int i = 0; i < dgvMalzemeler.Columns.Count; i++)
+                    {
+                        worksheet.Cell(1, i + 1).Value = dgvMalzemeler.Columns[i].HeaderText;
+                    }
+
+                    // Verileri yaz
+                    for (int i = 0; i < dgvMalzemeler.Rows.Count; i++)
+                    {
+                        for (int j = 0; j < dgvMalzemeler.Columns.Count; j++)
+                        {
+                            var val = dgvMalzemeler.Rows[i].Cells[j].Value;
+                            worksheet.Cell(i + 2, j + 1).Value = val != null ? val.ToString() : "";
+                        }
+                    }
+
+                    workbook.SaveAs(saveFileDialog.FileName);
+                    MessageBox.Show("Excel dosyası başarıyla kaydedildi.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Veri bulunamadı!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnGeri_Click(object sender, EventArgs e)
+        {
+            PersonelPanel personelpanel = new PersonelPanel();
+            this.Hide();
+            personelpanel.Show();
         }
     }
 }

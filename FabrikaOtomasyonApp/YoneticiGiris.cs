@@ -55,5 +55,11 @@ namespace FabrikaOtomasyonApp
                 MessageBox.Show("Kullanıcı adı, şifre veya rolünüz giriş için uygun değil.");
             }
         }
+
+        private void YoneticiGiris_Load(object sender, EventArgs e)
+        {
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+
+        }
     }
 }

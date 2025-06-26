@@ -83,6 +83,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "GirisPanel";
             this.Text = "Giriş Paneli";
+            this.Load += new System.EventHandler(this.GirisPanel_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -21,6 +21,8 @@ namespace FabrikaOtomasyonApp
         private void YoneticiPanel_Load(object sender, EventArgs e)
         {
             lblHosgeldin.Text = $"Sn. {KullaniciAdi}, hoş geldiniz.";
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+
         }
 
         private void btnPersoneller_Click(object sender, EventArgs e)

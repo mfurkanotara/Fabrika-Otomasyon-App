@@ -21,6 +21,8 @@ namespace FabrikaOtomasyonApp
         private void PersonelPanel_Load(object sender, EventArgs e)
         {
             lblHosgeldin.Text = $"Sn. {KullaniciAdi}, hoş geldiniz.";
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+
         }
 
         private void btnMalzemeler_Click(object sender, EventArgs e)

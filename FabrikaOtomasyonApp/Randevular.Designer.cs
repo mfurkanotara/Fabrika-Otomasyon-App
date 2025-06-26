@@ -50,6 +50,8 @@
             this.btnTemizle = new System.Windows.Forms.Button();
             this.btnGuncelle = new System.Windows.Forms.Button();
             this.randevularTableAdapter1 = new FabrikaOtomasyonApp.dbFabrikaDataSet6TableAdapters.randevularTableAdapter();
+            this.btnExcelAktarma = new System.Windows.Forms.Button();
+            this.btnGeri = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRandevular)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.randevularBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbFabrikaDataSet6)).BeginInit();
@@ -69,7 +71,7 @@
             this.dgvRandevular.DataSource = this.randevularBindingSource1;
             this.dgvRandevular.Location = new System.Drawing.Point(13, 12);
             this.dgvRandevular.Name = "dgvRandevular";
-            this.dgvRandevular.Size = new System.Drawing.Size(443, 424);
+            this.dgvRandevular.Size = new System.Drawing.Size(443, 476);
             this.dgvRandevular.TabIndex = 0;
             this.dgvRandevular.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRandevular_CellClick);
             // 
@@ -127,7 +129,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label6.Location = new System.Drawing.Point(509, 156);
+            this.label6.Location = new System.Drawing.Point(509, 173);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(125, 18);
             this.label6.TabIndex = 23;
@@ -138,7 +140,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(492, 121);
+            this.label3.Location = new System.Drawing.Point(492, 138);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(142, 18);
             this.label3.TabIndex = 22;
@@ -149,7 +151,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(494, 88);
+            this.label2.Location = new System.Drawing.Point(494, 105);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(140, 18);
             this.label2.TabIndex = 21;
@@ -157,21 +159,21 @@
             // 
             // txtRandevuKonusu
             // 
-            this.txtRandevuKonusu.Location = new System.Drawing.Point(640, 88);
+            this.txtRandevuKonusu.Location = new System.Drawing.Point(640, 105);
             this.txtRandevuKonusu.Name = "txtRandevuKonusu";
             this.txtRandevuKonusu.Size = new System.Drawing.Size(158, 20);
             this.txtRandevuKonusu.TabIndex = 25;
             // 
             // txtGorusulecekKisi
             // 
-            this.txtGorusulecekKisi.Location = new System.Drawing.Point(640, 121);
+            this.txtGorusulecekKisi.Location = new System.Drawing.Point(640, 138);
             this.txtGorusulecekKisi.Name = "txtGorusulecekKisi";
             this.txtGorusulecekKisi.Size = new System.Drawing.Size(158, 20);
             this.txtGorusulecekKisi.TabIndex = 26;
             // 
             // dtpRandevuTarihi
             // 
-            this.dtpRandevuTarihi.Location = new System.Drawing.Point(640, 154);
+            this.dtpRandevuTarihi.Location = new System.Drawing.Point(640, 171);
             this.dtpRandevuTarihi.Name = "dtpRandevuTarihi";
             this.dtpRandevuTarihi.Size = new System.Drawing.Size(158, 20);
             this.dtpRandevuTarihi.TabIndex = 28;
@@ -204,7 +206,7 @@
             // 
             this.btnTemizle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTemizle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnTemizle.Location = new System.Drawing.Point(462, 392);
+            this.btnTemizle.Location = new System.Drawing.Point(462, 444);
             this.btnTemizle.Name = "btnTemizle";
             this.btnTemizle.Size = new System.Drawing.Size(374, 44);
             this.btnTemizle.TabIndex = 32;
@@ -228,12 +230,38 @@
             // 
             this.randevularTableAdapter1.ClearBeforeFill = true;
             // 
+            // btnExcelAktarma
+            // 
+            this.btnExcelAktarma.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExcelAktarma.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnExcelAktarma.Location = new System.Drawing.Point(462, 394);
+            this.btnExcelAktarma.Name = "btnExcelAktarma";
+            this.btnExcelAktarma.Size = new System.Drawing.Size(373, 44);
+            this.btnExcelAktarma.TabIndex = 34;
+            this.btnExcelAktarma.Text = "Excel\'e Aktar";
+            this.btnExcelAktarma.UseVisualStyleBackColor = true;
+            this.btnExcelAktarma.Click += new System.EventHandler(this.btnExcelAktarma_Click);
+            // 
+            // btnGeri
+            // 
+            this.btnGeri.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGeri.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold);
+            this.btnGeri.Location = new System.Drawing.Point(739, 26);
+            this.btnGeri.Name = "btnGeri";
+            this.btnGeri.Size = new System.Drawing.Size(59, 31);
+            this.btnGeri.TabIndex = 35;
+            this.btnGeri.Text = "Geri";
+            this.btnGeri.UseVisualStyleBackColor = true;
+            this.btnGeri.Click += new System.EventHandler(this.btnGeri_Click);
+            // 
             // Randevular
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(844, 453);
+            this.ClientSize = new System.Drawing.Size(844, 504);
+            this.Controls.Add(this.btnGeri);
+            this.Controls.Add(this.btnExcelAktarma);
             this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.btnTemizle);
             this.Controls.Add(this.btnRandevuSil);
@@ -245,6 +273,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvRandevular);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Randevular";
             this.Text = "Randevular";
             this.Load += new System.EventHandler(this.Randevular_Load);
@@ -281,5 +310,7 @@
         private dbFabrikaDataSet6 dbFabrikaDataSet6;
         private System.Windows.Forms.BindingSource randevularBindingSource1;
         private dbFabrikaDataSet6TableAdapters.randevularTableAdapter randevularTableAdapter1;
+        private System.Windows.Forms.Button btnExcelAktarma;
+        private System.Windows.Forms.Button btnGeri;
     }
 }

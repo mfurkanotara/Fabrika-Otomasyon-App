@@ -31,5 +31,10 @@ namespace FabrikaOtomasyonApp
             this.Hide();
         }
 
+        private void GirisPanel_Load(object sender, EventArgs e)
+        {
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+
+        }
     }
 }

@@ -56,6 +56,8 @@
             this.btnTemizle = new System.Windows.Forms.Button();
             this.btnExcelAktarma = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
+            this.btnGuncelle = new System.Windows.Forms.Button();
+            this.btnGeri = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEvraklar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.evraklarBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbFabrikaDataSet2)).BeginInit();
@@ -76,8 +78,9 @@
             this.dgvEvraklar.DataSource = this.evraklarBindingSource;
             this.dgvEvraklar.Location = new System.Drawing.Point(13, 13);
             this.dgvEvraklar.Name = "dgvEvraklar";
-            this.dgvEvraklar.Size = new System.Drawing.Size(743, 657);
+            this.dgvEvraklar.Size = new System.Drawing.Size(743, 705);
             this.dgvEvraklar.TabIndex = 0;
+            this.dgvEvraklar.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEvraklar_CellClick);
             // 
             // evrakIdDataGridViewTextBoxColumn
             // 
@@ -255,7 +258,7 @@
             // 
             this.btnTemizle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTemizle.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold);
-            this.btnTemizle.Location = new System.Drawing.Point(778, 628);
+            this.btnTemizle.Location = new System.Drawing.Point(778, 676);
             this.btnTemizle.Name = "btnTemizle";
             this.btnTemizle.Size = new System.Drawing.Size(269, 42);
             this.btnTemizle.TabIndex = 15;
@@ -267,7 +270,7 @@
             // 
             this.btnExcelAktarma.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExcelAktarma.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold);
-            this.btnExcelAktarma.Location = new System.Drawing.Point(778, 580);
+            this.btnExcelAktarma.Location = new System.Drawing.Point(778, 628);
             this.btnExcelAktarma.Name = "btnExcelAktarma";
             this.btnExcelAktarma.Size = new System.Drawing.Size(269, 42);
             this.btnExcelAktarma.TabIndex = 16;
@@ -287,12 +290,37 @@
             this.btnSil.UseVisualStyleBackColor = true;
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
+            // btnGuncelle
+            // 
+            this.btnGuncelle.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnGuncelle.Location = new System.Drawing.Point(778, 580);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(269, 42);
+            this.btnGuncelle.TabIndex = 18;
+            this.btnGuncelle.Text = "Güncelle";
+            this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
+            // 
+            // btnGeri
+            // 
+            this.btnGeri.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGeri.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold);
+            this.btnGeri.Location = new System.Drawing.Point(974, 13);
+            this.btnGeri.Name = "btnGeri";
+            this.btnGeri.Size = new System.Drawing.Size(59, 31);
+            this.btnGeri.TabIndex = 19;
+            this.btnGeri.Text = "Geri";
+            this.btnGeri.UseVisualStyleBackColor = true;
+            this.btnGeri.Click += new System.EventHandler(this.btnGeri_Click);
+            // 
             // Evraklar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gold;
-            this.ClientSize = new System.Drawing.Size(1059, 684);
+            this.ClientSize = new System.Drawing.Size(1059, 738);
+            this.Controls.Add(this.btnGeri);
+            this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.btnSil);
             this.Controls.Add(this.btnExcelAktarma);
             this.Controls.Add(this.btnTemizle);
@@ -310,6 +338,7 @@
             this.Controls.Add(this.txtEvrakTuru);
             this.Controls.Add(this.txtEvrakAdi);
             this.Controls.Add(this.dgvEvraklar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Evraklar";
             this.Text = "Evraklar";
@@ -351,5 +380,7 @@
         private System.Windows.Forms.Button btnTemizle;
         private System.Windows.Forms.Button btnExcelAktarma;
         private System.Windows.Forms.Button btnSil;
+        private System.Windows.Forms.Button btnGuncelle;
+        private System.Windows.Forms.Button btnGeri;
     }
 }

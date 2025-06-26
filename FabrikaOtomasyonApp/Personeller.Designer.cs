@@ -46,6 +46,9 @@
             this.btnTemizle = new System.Windows.Forms.Button();
             this.cbRol = new System.Windows.Forms.ComboBox();
             this.btnSil = new System.Windows.Forms.Button();
+            this.btnGuncelle = new System.Windows.Forms.Button();
+            this.btnExcelAktarma = new System.Windows.Forms.Button();
+            this.btnGeri = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKullanicilar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kullanicilarBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbFabrikaDataSet3)).BeginInit();
@@ -63,8 +66,9 @@
             this.dgvKullanicilar.DataSource = this.kullanicilarBindingSource;
             this.dgvKullanicilar.Location = new System.Drawing.Point(13, 13);
             this.dgvKullanicilar.Name = "dgvKullanicilar";
-            this.dgvKullanicilar.Size = new System.Drawing.Size(443, 490);
+            this.dgvKullanicilar.Size = new System.Drawing.Size(443, 516);
             this.dgvKullanicilar.TabIndex = 0;
+            this.dgvKullanicilar.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKullanicilar_CellClick);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -158,7 +162,7 @@
             this.btnKaydet.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnKaydet.Location = new System.Drawing.Point(481, 281);
             this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(296, 70);
+            this.btnKaydet.Size = new System.Drawing.Size(296, 45);
             this.btnKaydet.TabIndex = 15;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.UseVisualStyleBackColor = true;
@@ -168,9 +172,9 @@
             // 
             this.btnTemizle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTemizle.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold);
-            this.btnTemizle.Location = new System.Drawing.Point(481, 433);
+            this.btnTemizle.Location = new System.Drawing.Point(481, 484);
             this.btnTemizle.Name = "btnTemizle";
-            this.btnTemizle.Size = new System.Drawing.Size(296, 70);
+            this.btnTemizle.Size = new System.Drawing.Size(296, 45);
             this.btnTemizle.TabIndex = 16;
             this.btnTemizle.Text = "Temizle";
             this.btnTemizle.UseVisualStyleBackColor = true;
@@ -192,20 +196,58 @@
             // 
             this.btnSil.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSil.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold);
-            this.btnSil.Location = new System.Drawing.Point(481, 357);
+            this.btnSil.Location = new System.Drawing.Point(481, 332);
             this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(296, 70);
+            this.btnSil.Size = new System.Drawing.Size(296, 45);
             this.btnSil.TabIndex = 18;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = true;
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
+            // 
+            // btnGuncelle
+            // 
+            this.btnGuncelle.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnGuncelle.Location = new System.Drawing.Point(481, 383);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(296, 45);
+            this.btnGuncelle.TabIndex = 19;
+            this.btnGuncelle.Text = "Güncelle";
+            this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
+            // 
+            // btnExcelAktarma
+            // 
+            this.btnExcelAktarma.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExcelAktarma.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnExcelAktarma.Location = new System.Drawing.Point(481, 433);
+            this.btnExcelAktarma.Name = "btnExcelAktarma";
+            this.btnExcelAktarma.Size = new System.Drawing.Size(296, 45);
+            this.btnExcelAktarma.TabIndex = 20;
+            this.btnExcelAktarma.Text = "Excel\'e Aktar";
+            this.btnExcelAktarma.UseVisualStyleBackColor = true;
+            this.btnExcelAktarma.Click += new System.EventHandler(this.btnExcelAktarma_Click);
+            // 
+            // btnGeri
+            // 
+            this.btnGeri.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGeri.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold);
+            this.btnGeri.Location = new System.Drawing.Point(693, 22);
+            this.btnGeri.Name = "btnGeri";
+            this.btnGeri.Size = new System.Drawing.Size(59, 31);
+            this.btnGeri.TabIndex = 21;
+            this.btnGeri.Text = "Geri";
+            this.btnGeri.UseVisualStyleBackColor = true;
+            this.btnGeri.Click += new System.EventHandler(this.btnGeri_Click);
             // 
             // Personeller
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ClientSize = new System.Drawing.Size(800, 515);
+            this.ClientSize = new System.Drawing.Size(787, 553);
+            this.Controls.Add(this.btnGeri);
+            this.Controls.Add(this.btnExcelAktarma);
+            this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.btnSil);
             this.Controls.Add(this.cbRol);
             this.Controls.Add(this.btnTemizle);
@@ -216,6 +258,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvKullanicilar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Personeller";
             this.Text = "Personeller";
             this.Load += new System.EventHandler(this.Personeller_Load);
@@ -246,5 +289,8 @@
         private System.Windows.Forms.Button btnTemizle;
         private System.Windows.Forms.ComboBox cbRol;
         private System.Windows.Forms.Button btnSil;
+        private System.Windows.Forms.Button btnGuncelle;
+        private System.Windows.Forms.Button btnExcelAktarma;
+        private System.Windows.Forms.Button btnGeri;
     }
 }

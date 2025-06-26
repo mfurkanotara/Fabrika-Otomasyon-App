@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\mfurk\\source\\repos\\FabrikaOtomasyonApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{943B6DD2-F7E5-4315-8978-CCFCC89B0BE3}|FabrikaOtomasyonApp\\FabrikaOtomasyonApp.csproj|c:\\users\\mfurk\\source\\repos\\fabrikaotomasyonapp\\fabrikaotomasyonapp\\malzemeler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{943B6DD2-F7E5-4315-8978-CCFCC89B0BE3}|FabrikaOtomasyonApp\\FabrikaOtomasyonApp.csproj|solutionrelative:fabrikaotomasyonapp\\malzemeler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{943B6DD2-F7E5-4315-8978-CCFCC89B0BE3}|FabrikaOtomasyonApp\\FabrikaOtomasyonApp.csproj|c:\\users\\mfurk\\source\\repos\\fabrikaotomasyonapp\\fabrikaotomasyonapp\\randevular.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{943B6DD2-F7E5-4315-8978-CCFCC89B0BE3}|FabrikaOtomasyonApp\\FabrikaOtomasyonApp.csproj|solutionrelative:fabrikaotomasyonapp\\randevular.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{943B6DD2-F7E5-4315-8978-CCFCC89B0BE3}|FabrikaOtomasyonApp\\FabrikaOtomasyonApp.csproj|c:\\users\\mfurk\\source\\repos\\fabrikaotomasyonapp\\fabrikaotomasyonapp\\malzemeler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{943B6DD2-F7E5-4315-8978-CCFCC89B0BE3}|FabrikaOtomasyonApp\\FabrikaOtomasyonApp.csproj|solutionrelative:fabrikaotomasyonapp\\malzemeler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{943B6DD2-F7E5-4315-8978-CCFCC89B0BE3}|FabrikaOtomasyonApp\\FabrikaOtomasyonApp.csproj|c:\\users\\mfurk\\source\\repos\\fabrikaotomasyonapp\\fabrikaotomasyonapp\\randevular.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{943B6DD2-F7E5-4315-8978-CCFCC89B0BE3}|FabrikaOtomasyonApp\\FabrikaOtomasyonApp.csproj|solutionrelative:fabrikaotomasyonapp\\randevular.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{943B6DD2-F7E5-4315-8978-CCFCC89B0BE3}|FabrikaOtomasyonApp\\FabrikaOtomasyonApp.csproj|c:\\users\\mfurk\\source\\repos\\fabrikaotomasyonapp\\fabrikaotomasyonapp\\evraklar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{943B6DD2-F7E5-4315-8978-CCFCC89B0BE3}|FabrikaOtomasyonApp\\FabrikaOtomasyonApp.csproj|solutionrelative:fabrikaotomasyonapp\\evraklar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,28 +30,40 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Malzemeler.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\mfurk\\source\\repos\\FabrikaOtomasyonApp\\FabrikaOtomasyonApp\\Malzemeler.cs",
-              "RelativeDocumentMoniker": "FabrikaOtomasyonApp\\Malzemeler.cs",
-              "ToolTip": "C:\\Users\\mfurk\\source\\repos\\FabrikaOtomasyonApp\\FabrikaOtomasyonApp\\Malzemeler.cs [Design]",
-              "RelativeToolTip": "FabrikaOtomasyonApp\\Malzemeler.cs [Design]",
+              "DocumentIndex": 0,
+              "Title": "Randevular.cs",
+              "DocumentMoniker": "C:\\Users\\mfurk\\source\\repos\\FabrikaOtomasyonApp\\FabrikaOtomasyonApp\\Randevular.cs",
+              "RelativeDocumentMoniker": "FabrikaOtomasyonApp\\Randevular.cs",
+              "ToolTip": "C:\\Users\\mfurk\\source\\repos\\FabrikaOtomasyonApp\\FabrikaOtomasyonApp\\Randevular.cs",
+              "RelativeToolTip": "FabrikaOtomasyonApp\\Randevular.cs",
+              "ViewState": "AgIAALkAAAAAAAAAAAAUwMwAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T15:37:26.48Z",
+              "WhenOpened": "2025-06-26T19:32:21.793Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Evraklar.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\mfurk\\source\\repos\\FabrikaOtomasyonApp\\FabrikaOtomasyonApp\\Evraklar.cs",
+              "RelativeDocumentMoniker": "FabrikaOtomasyonApp\\Evraklar.cs",
+              "ToolTip": "C:\\Users\\mfurk\\source\\repos\\FabrikaOtomasyonApp\\FabrikaOtomasyonApp\\Evraklar.cs [Design]",
+              "RelativeToolTip": "FabrikaOtomasyonApp\\Evraklar.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T19:32:11.497Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Malzemeler.cs",
-              "DocumentMoniker": "C:\\Users\\mfurk\\source\\repos\\FabrikaOtomasyonApp\\FabrikaOtomasyonApp\\Malzemeler.cs",
-              "RelativeDocumentMoniker": "FabrikaOtomasyonApp\\Malzemeler.cs",
-              "ToolTip": "C:\\Users\\mfurk\\source\\repos\\FabrikaOtomasyonApp\\FabrikaOtomasyonApp\\Malzemeler.cs",
-              "RelativeToolTip": "FabrikaOtomasyonApp\\Malzemeler.cs",
-              "ViewState": "AgIAAIQAAAAAAAAAAAAYwJQAAABYAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Randevular.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\mfurk\\source\\repos\\FabrikaOtomasyonApp\\FabrikaOtomasyonApp\\Randevular.cs",
+              "RelativeDocumentMoniker": "FabrikaOtomasyonApp\\Randevular.cs",
+              "ToolTip": "C:\\Users\\mfurk\\source\\repos\\FabrikaOtomasyonApp\\FabrikaOtomasyonApp\\Randevular.cs [Design]",
+              "RelativeToolTip": "FabrikaOtomasyonApp\\Randevular.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T15:36:43.977Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-26T19:30:34.743Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

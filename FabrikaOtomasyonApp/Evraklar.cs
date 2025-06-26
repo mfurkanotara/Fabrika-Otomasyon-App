@@ -25,6 +25,7 @@ namespace FabrikaOtomasyonApp
         {
             // TODO: This line of code loads data into the 'dbFabrikaDataSet2.evraklar' table. You can move, or remove it, as needed.
             // this.evraklarTableAdapter.Fill(this.dbFabrikaDataSet2.evraklar);
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             ListeleEvraklar();
         }
 
@@ -50,9 +51,9 @@ namespace FabrikaOtomasyonApp
                 MessageBox.Show("Lütfen bütün alanları doldurunuz.");
             }
 
-            SqlCommand command = new SqlCommand("INSERT INTO malzemeler (evrakAdi, evrakTuru, birim, tarih, dosyaYolu, aciklama) VALUES (@evrakadi, @evrakturu, @birim, @tarih, @dosyayolu, @aciklama)", baglanti);
+            SqlCommand command = new SqlCommand("INSERT INTO evraklar (evrakAdi, evrakTuru, birim, tarih, dosyaYolu, aciklama) VALUES (@evrakadi, @evrakturu, @birim, @tarih, @dosyayolu, @aciklama)", baglanti);
             command.Parameters.AddWithValue("@evrakadi", evrakadi);
-            command.Parameters.AddWithValue("@malzemeadi", evrakturu);
+            command.Parameters.AddWithValue("@evrakturu", evrakturu);
             command.Parameters.AddWithValue("@birim", birim);
             command.Parameters.AddWithValue("@tarih", tarih);
             command.Parameters.AddWithValue("@dosyayolu", dosyayolu);
@@ -153,6 +154,73 @@ namespace FabrikaOtomasyonApp
             {
                 MessageBox.Show("Veri bulunamadı!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void dgvEvraklar_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow satir = dgvEvraklar.Rows[e.RowIndex];
+                txtEvrakAdi.Text = satir.Cells["evrakAdiDataGridViewTextBoxColumn"].Value.ToString();
+                txtEvrakTuru.Text = satir.Cells["evrakTuruDataGridViewTextBoxColumn"].Value.ToString();
+                txtBirim.Text = satir.Cells["birimDataGridViewTextBoxColumn"].Value.ToString();
+                dtpTarih.Text = satir.Cells["tarihDataGridViewTextBoxColumn"].Value.ToString();
+                txtDosyaYolu.Text = satir.Cells["dosyayoluDataGridViewTextBoxColumn"].Value.ToString();
+                txtAciklama.Text = satir.Cells["aciklamaDataGridViewTextBoxColumn"].Value.ToString();
+            }
+        }
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            if(dgvEvraklar.Rows.Count > 0)
+            {
+                string evrakadi = txtEvrakAdi.Text;
+                string evrakturu = txtEvrakTuru.Text;
+                string birim = txtBirim.Text;
+                DateTime tarih = dtpTarih.Value;
+                string dosyayolu = txtDosyaYolu.Text;
+                string aciklama = txtAciklama.Text;
+
+
+                string secilenevrakId = dgvEvraklar.SelectedRows[0].Cells["evrakIdDataGridViewTextBoxColumn"].Value?.ToString();
+
+                SqlCommand command = new SqlCommand(@"UPDATE evraklar SET evrakAdi = @evrakadi, evrakTuru = @evrakturu, birim = @birim, tarih = @tarih, dosyaYolu = @dosyayolu, aciklama = @aciklama WHERE evrakId = @eskievrakid", baglanti);
+
+                command.Parameters.AddWithValue("@eskievrakid", secilenevrakId);
+                command.Parameters.AddWithValue("@evrakadi", evrakadi);
+                command.Parameters.AddWithValue("@evrakturu", evrakturu);
+                command.Parameters.AddWithValue("@birim", birim);
+                command.Parameters.AddWithValue("@tarih", tarih);
+                command.Parameters.AddWithValue("@dosyayolu", dosyayolu);
+                command.Parameters.AddWithValue("@aciklama", aciklama);
+
+                try
+                {
+                    baglanti.Open();
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Evrak güncellendi.");
+                    ListeleEvraklar();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Hata: " + ex.Message);
+                }
+                finally
+                {
+                    baglanti.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Lütfen güncellenecek bir evrak seçin.");
+            }
+        }
+
+        private void btnGeri_Click(object sender, EventArgs e)
+        {
+            PersonelPanel personelpanel = new PersonelPanel();
+            this.Hide();
+            personelpanel.Show();
         }
     }
 }

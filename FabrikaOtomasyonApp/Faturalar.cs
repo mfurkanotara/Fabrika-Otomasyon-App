@@ -27,7 +27,7 @@ namespace FabrikaOtomasyonApp
             // TODO: This line of code loads data into the 'dbFabrikaDataSet4.faturalar' table. You can move, or remove it, as needed.
             // this.faturalarTableAdapter.Fill(this.dbFabrikaDataSet4.faturalar);
             ListeleFaturalar();
-
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         private void ListeleFaturalar()
@@ -236,6 +236,13 @@ namespace FabrikaOtomasyonApp
             {
                 MessageBox.Show("Veri bulunamadı!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnGeri_Click(object sender, EventArgs e)
+        {
+            YoneticiPanel yoneticipanel = new YoneticiPanel();
+            this.Hide();
+            yoneticipanel.Show();
         }
     }
 }

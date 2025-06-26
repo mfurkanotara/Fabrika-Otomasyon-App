@@ -58,6 +58,7 @@ namespace FabrikaOtomasyonApp
 
         private void PersonelGiris_Load(object sender, EventArgs e)
         {
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
 
         }
     }

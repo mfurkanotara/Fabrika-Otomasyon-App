@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClosedXML.Excel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,6 +26,8 @@ namespace FabrikaOtomasyonApp
             // TODO: This line of code loads data into the 'dbFabrikaDataSet6.randevular' table. You can move, or remove it, as needed.
             // this.randevularTableAdapter1.Fill(this.dbFabrikaDataSet6.randevular);
             ListeleRandevular();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+
         }
 
         private void ListeleRandevular()
@@ -153,6 +156,53 @@ namespace FabrikaOtomasyonApp
             {
                 MessageBox.Show("Lütfen silmek için bir satır seçin.");
             }
+        }
+
+        private void btnExcelAktarma_Click(object sender, EventArgs e)
+        {
+            if (dgvRandevular.Rows.Count > 0)
+            {
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
+                saveFileDialog.Filter = "Excel Files|*.xlsx";
+                saveFileDialog.Title = "Excel Dosyasını Kaydet";
+                saveFileDialog.FileName = "Randevular.xlsx";
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    var workbook = new XLWorkbook();
+                    var worksheet = workbook.Worksheets.Add("Randevular");
+
+                    // Başlıkları yaz
+                    for (int i = 0; i < dgvRandevular.Columns.Count; i++)
+                    {
+                        worksheet.Cell(1, i + 1).Value = dgvRandevular.Columns[i].HeaderText;
+                    }
+
+                    // Verileri yaz
+                    for (int i = 0; i < dgvRandevular.Rows.Count; i++)
+                    {
+                        for (int j = 0; j < dgvRandevular.Columns.Count; j++)
+                        {
+                            var val = dgvRandevular.Rows[i].Cells[j].Value;
+                            worksheet.Cell(i + 2, j + 1).Value = val != null ? val.ToString() : "";
+                        }
+                    }
+
+                    workbook.SaveAs(saveFileDialog.FileName);
+                    MessageBox.Show("Excel dosyası başarıyla kaydedildi.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Veri bulunamadı!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnGeri_Click(object sender, EventArgs e)
+        {
+            YoneticiPanel yoneticipanel = new YoneticiPanel();
+            this.Hide();
+            yoneticipanel.Show();
         }
     }
 }
